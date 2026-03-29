@@ -386,8 +386,13 @@
         <div class="location-flags">
           <div class="location-row">
             <span class="flag">🇮🇳</span>
-            <span class="loc-label">Pune, Maharashtra</span>
+            <span class="loc-label">Raipur, Chhattisgarh</span>
             <span class="loc-role">HQ</span>
+          </div>
+          <div class="location-row">
+            <span class="flag">🇮🇳</span>
+            <span class="loc-label">Pune, Maharashtra</span>
+            <span class="loc-role">Serving</span>
           </div>
           <div class="location-row">
             <span class="flag">🇦🇪</span>
@@ -404,13 +409,13 @@
       <!-- Google Maps Embed — replace src with your actual embed URL -->
       <div class="map-wrap">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d242011.70502563682!2d73.72629565!3d18.524564799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bf2e67461101%3A0x828d43bf9d9ee343!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-          title="Anbias HQ — Pune, India"
+          src="https://maps.google.com/maps?q=23%20SBI%20Colony%20Tagore%20Nagar%20Raipur&t=&z=14&ie=UTF8&iwloc=&output=embed"
+          title="Anbias HQ — 23 SBI Colony Tagore Nagar"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
-          aria-label="Map showing Anbias headquarters in Pune, India">
+          aria-label="Map showing Anbias headquarters at 23 SBI Colony Tagore Nagar">
         </iframe>
-        <div class="map-label">📍 Pune, India</div>
+        <div class="map-label">📍 23 SBI Colony Tagore Nagar</div>
       </div>
     </div>
 
@@ -435,21 +440,6 @@
       <div class="proof-quote">
         "Anbias uncovered <span>4 critical vulnerabilities</span> in our payment flow we had no idea about."
         — Priya S., FinEdge
-      </div>
-    </div>
-
-    <!-- Availability slots -->
-    <div class="avail-card" data-component="availability">
-      <div class="avail-title">This Week's Open Slots</div>
-      <div class="avail-slots">
-        <span class="avail-slot">Mon 10am</span>
-        <span class="avail-slot taken">Mon 2pm</span>
-        <span class="avail-slot">Tue 11am</span>
-        <span class="avail-slot taken">Wed 10am</span>
-        <span class="avail-slot">Wed 3pm</span>
-        <span class="avail-slot">Thu 10am</span>
-        <span class="avail-slot taken">Fri 11am</span>
-        <span class="avail-slot">Fri 2pm</span>
       </div>
     </div>
 

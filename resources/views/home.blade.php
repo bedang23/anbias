@@ -629,7 +629,7 @@
   <p class="fcta-sub">Join 150+ businesses across the US and India who chose Anbias. Let's start with a free conversation.</p>
   <div class="fcta-btns">
     <a href="#consult" class="btn-lime">Book Free Consultancy</a>
-    <a href="/cdn-cgi/l/email-protection#7e1d11100a1f1d0a3e1f101c171f0d501d1113" class="btn-ghost"><span class="__cf_email__" data-cfemail="dab9b5b4aebbb9ae9abbb4b8b3bba9f4b9b5b7">[email&#160;protected]</span></a>
+    <a href="mailto:contact@anbias.com" class="btn-ghost">contact@anbias.com</a>
   </div>
 </div>
 @endsection
