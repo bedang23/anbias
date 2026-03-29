@@ -15,6 +15,7 @@ Route::view('/terms-and-conditions', 'pages.terms')->name('terms');
 Route::view('/sitemap', 'pages.sitemap')->name('sitemap');
 Route::get('/services', [ServicePageController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServicePageController::class, 'show'])->name('services.show');
+Route::post('/services/enquiry', [ContactEnquiryController::class, 'storeService'])->name('services.enquiry.store');
 
 Route::post('/contact', [ContactEnquiryController::class, 'store'])->name('contact.store');
 

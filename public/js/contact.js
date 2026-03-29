@@ -78,11 +78,16 @@ document.querySelectorAll('[data-validate]').forEach((input) => {
   });
 });
 
+const formStartedAt = document.getElementById('formStartedAt');
+if (formStartedAt) {
+  formStartedAt.value = Math.floor(Date.now() / 1000).toString();
+}
+
 function validateStep(step) {
   let allValid = true;
 
   if (step === 1) {
-    ['fullName', 'email'].forEach((id) => {
+    ['fullName', 'email', 'phone'].forEach((id) => {
       const el = document.getElementById(id);
       if (el && !validateField(el)) allValid = false;
     });
@@ -141,20 +146,94 @@ function selectTimeline(el) {
   document.getElementById('timelineValue').value = el.dataset.val;
 }
 
+function applyServerFieldError(serverKey, message) {
+  const fieldMap = {
+    full_name: 'fullName',
+    email: 'email',
+    phone_number: 'phone',
+    website_url: 'website',
+    message: 'message',
+  };
+
+  const id = fieldMap[serverKey];
+  if (!id) return;
+
+  const fg = document.getElementById('fg-' + id);
+  const errEl = document.getElementById('err-' + id);
+  if (!fg || !errEl) return;
+  fg.classList.add('is-error');
+  errEl.textContent = message;
+}
+
 document.getElementById('contactForm')?.addEventListener('submit', async function (e) {
+  e.preventDefault();
+
   if (!validateStep(3)) {
-    e.preventDefault();
     return;
   }
 
+  const form = e.currentTarget;
   const btn = document.getElementById('submitBtn');
   const label = document.getElementById('submitLabel');
   const arrow = document.getElementById('submitArrow');
+  const successBox = document.getElementById('formSuccess');
+  const successEmail = document.getElementById('successEmail');
+  const formError = document.getElementById('formErrorGlobal');
+
+  if (formError) {
+    formError.textContent = '';
+  }
 
   if (btn && label && arrow) {
     btn.disabled = true;
     label.textContent = 'Sending...';
     arrow.textContent = '⏳';
+  }
+
+  try {
+    const res = await fetch(form.dataset.action || form.action, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: new FormData(form),
+    });
+
+    const payload = await res.json().catch(() => ({}));
+
+    if (!res.ok) {
+      if (payload?.errors) {
+        Object.entries(payload.errors).forEach(([key, messages]) => {
+          applyServerFieldError(key, Array.isArray(messages) ? messages[0] : String(messages));
+        });
+      }
+      throw new Error(payload?.message || 'Could not submit your request. Please try again.');
+    }
+
+    if (successEmail) {
+      successEmail.textContent = document.getElementById('email')?.value || '';
+    }
+
+    document.querySelectorAll('.form-step').forEach((stepEl) => stepEl.classList.remove('active'));
+    document.querySelector('.form-progress')?.setAttribute('style', 'display:none');
+    if (successBox) {
+      successBox.classList.add('show');
+    }
+    form.reset();
+    if (formStartedAt) {
+      formStartedAt.value = Math.floor(Date.now() / 1000).toString();
+    }
+  } catch (error) {
+    if (formError) {
+      formError.textContent = error.message || 'Could not submit your request. Please try again.';
+    }
+  } finally {
+    if (btn && label && arrow) {
+      btn.disabled = false;
+      label.textContent = 'Claim My Strategy Session';
+      arrow.textContent = '↗';
+    }
   }
 });
 

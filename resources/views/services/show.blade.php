@@ -8,7 +8,7 @@
 @endpush
 
 @push('scripts')
-<script src="{{ asset('js/service-page.js') }}"></script>
+<script defer src="{{ asset('js/service-page.js') }}"></script>
 @endpush
 
 @php
@@ -663,17 +663,23 @@ $serviceMeta = [
     <div class="consult-form-wrap rv d2">
       <div class="cf-title">Let's Build<br>Something</div>
       <p class="cf-sub">Takes 2 minutes. We respond within 24 hours.</p>
-      <form onsubmit="submitForm2(event)">
-        <div class="form-row2">
-          <div class="fg"><label>First Name</label><input type="text" placeholder="Rahul" required/></div>
-          <div class="fg"><label>Last Name</label><input type="text" placeholder="Sharma"/></div>
+      <form method="POST" action="{{ route('services.enquiry.store') }}" onsubmit="submitForm2(event)">
+        @csrf
+        <input type="hidden" name="service_slug" value="{{ $slug }}">
+        <input type="hidden" name="form_started_at" class="form-started-at" value="">
+        <div style="position:absolute;left:-9999px;opacity:0;pointer-events:none" aria-hidden="true">
+          <input type="text" name="_hp_field" tabindex="-1" autocomplete="off"/>
         </div>
-        <div class="fg"><label>Business Email</label><input type="email" placeholder="you@company.com" required/></div>
-        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" placeholder="+1 or +91..."/></div>
-        <div class="fg"><label>Existing Website (if any)</label><input type="url" placeholder="https://yoursite.com"/></div>
+        <div class="form-row2">
+          <div class="fg"><label>First Name</label><input type="text" name="first_name" placeholder="Rahul" required/></div>
+          <div class="fg"><label>Last Name</label><input type="text" name="last_name" placeholder="Sharma"/></div>
+        </div>
+        <div class="fg"><label>Business Email</label><input type="email" name="email" placeholder="you@company.com" required/></div>
+        <div class="fg"><label>Phone / WhatsApp</label><input type="tel" name="phone_number" placeholder="+1 or +91..." required/></div>
+        <div class="fg"><label>Existing Website (if any)</label><input type="url" name="website_url" placeholder="https://yoursite.com"/></div>
         <div class="fg">
           <label>Project Type</label>
-          <select>
+          <select name="project_type" required>
             <option value="">Select one...</option>
             <option>New business website</option>
             <option>Custom web application / SaaS</option>
@@ -684,9 +690,11 @@ $serviceMeta = [
             <option>Not sure yet - need guidance</option>
           </select>
         </div>
-        <div class="fg"><label>Project Brief</label><textarea placeholder="Describe your project, goals, and timeline..."></textarea></div>
+        <div class="fg"><label>Project Brief</label><textarea name="message" placeholder="Describe your project, goals, and timeline..." required></textarea></div>
         <button type="submit" class="form-submit2">{{ $service['consult_label'] }} →</button>
         <p class="form-note2">🔒 Private. No spam. No commitment.</p>
+        <p class="form-success-msg" id="serviceFormSuccess">✓ Thank you for contacting us. We will get back to you soon.</p>
+        <p class="form-error-msg" id="serviceFormError"></p>
       </form>
     </div>
   </div>

@@ -91,6 +91,7 @@
         novalidate
       >
         @csrf
+        <input type="hidden" name="form_started_at" id="formStartedAt" value="">
 
         <!-- ── STEP 1: Who are you ── -->
         <div class="form-step active" id="step1" data-step="1">
@@ -144,16 +145,20 @@
             <span class="field-error" id="err-website">Please enter a valid URL (include https://).</span>
           </div>
 
-          <div class="field-group" id="fg-company">
-            <label for="company">
-              Company / Project Name <span class="opt">(optional)</span>
+          <div class="field-group" id="fg-phone">
+            <label for="phone">
+              Phone / WhatsApp <span class="req">*</span>
             </label>
             <input
-              type="text"
-              id="company"
-              name="company_name"
-              placeholder="Acme Corp"
+              type="tel"
+              id="phone"
+              name="phone_number"
+              placeholder="+91 98XXXXXXXX"
+              autocomplete="tel"
+              data-validate="required|minlen:7"
             />
+            <span class="field-icon">✓</span>
+            <span class="field-error" id="err-phone">Please enter a valid phone number.</span>
           </div>
 
           <div class="step-nav">
@@ -310,6 +315,7 @@
             </button>
           </div>
           <p class="form-disclaimer">🔒 Your data is never shared or sold. By submitting you agree to our Privacy Policy. Response guaranteed within 24 hours.</p>
+          <p class="form-error-global" id="formErrorGlobal"></p>
         </div>
 
         <!-- ── SUCCESS STATE ── -->
@@ -448,5 +454,5 @@
 @endsection
 
 @push('scripts')
-<script src="{{ asset('js/contact.js') }}"></script>
+<script defer src="{{ asset('js/contact.js') }}"></script>
 @endpush

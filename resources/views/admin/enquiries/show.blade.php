@@ -11,6 +11,9 @@
             <div class="admin-details" style="margin-top:18px;">
                 <article class="admin-detail"><h4>Full name</h4><p>{{ $enquiry->full_name }}</p></article>
                 <article class="admin-detail"><h4>Email</h4><p>{{ $enquiry->email }}</p></article>
+                <article class="admin-detail"><h4>Phone</h4><p>{{ $enquiry->phone_number ?: '—' }}</p></article>
+                <article class="admin-detail"><h4>Enquiry type</h4><p>{{ ucfirst($enquiry->enquiry_type ?: 'contact') }}</p></article>
+                <article class="admin-detail"><h4>Service page</h4><p>{{ $enquiry->service_slug ?: '—' }}</p></article>
                 <article class="admin-detail"><h4>Company</h4><p>{{ $enquiry->company_name ?: '—' }}</p></article>
                 <article class="admin-detail"><h4>Website</h4><p>{{ $enquiry->website_url ?: '—' }}</p></article>
                 <article class="admin-detail"><h4>Primary goal</h4><p>{{ $enquiry->primary_goal ?: '—' }}</p></article>

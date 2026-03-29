@@ -28,17 +28,61 @@ window.toggleFaq2 = function toggleFaq2(button) {
   }
 };
 
-window.submitForm2 = function submitForm2(event) {
+window.submitForm2 = async function submitForm2(event) {
   event.preventDefault();
-  const button = event.target.querySelector('.form-submit2');
+  const form = event.target;
+  const button = form.querySelector('.form-submit2');
+  const success = form.querySelector('#serviceFormSuccess');
+  const errorBox = form.querySelector('#serviceFormError');
+  const startedAt = form.querySelector('.form-started-at');
 
   if (!button) {
     return;
   }
 
-  button.textContent = "✓ Booked! We'll be in touch within 24 hours.";
-  button.style.background = '#27C93F';
+  if (startedAt && !startedAt.value) {
+    startedAt.value = Math.floor(Date.now() / 1000).toString();
+  }
+  if (success) success.classList.remove('show');
+  if (errorBox) errorBox.textContent = '';
+
+  const originalText = button.textContent;
+  button.textContent = 'Sending...';
   button.disabled = true;
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+      },
+      body: new FormData(form),
+    });
+
+    const payload = await res.json().catch(() => ({}));
+    if (!res.ok) {
+      const firstServerError = payload?.errors
+        ? Object.values(payload.errors)[0]?.[0]
+        : null;
+      throw new Error(firstServerError || payload?.message || 'Could not submit your request. Please try again.');
+    }
+
+    form.reset();
+    if (startedAt) {
+      startedAt.value = Math.floor(Date.now() / 1000).toString();
+    }
+    if (success) {
+      success.classList.add('show');
+    }
+  } catch (error) {
+    if (errorBox) {
+      errorBox.textContent = error.message || 'Could not submit your request. Please try again.';
+    }
+  } finally {
+    button.textContent = originalText;
+    button.disabled = false;
+  }
 };
 
 (function () {
@@ -48,6 +92,14 @@ window.submitForm2 = function submitForm2(event) {
       card.style.setProperty('--mx', ((event.clientX - rect.left) / rect.width) * 100 + '%');
       card.style.setProperty('--my', ((event.clientY - rect.top) / rect.height) * 100 + '%');
     });
+  });
+})();
+
+(function () {
+  document.querySelectorAll('.form-started-at').forEach((input) => {
+    if (!input.value) {
+      input.value = Math.floor(Date.now() / 1000).toString();
+    }
   });
 })();
 

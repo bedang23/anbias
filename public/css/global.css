@@ -265,6 +265,38 @@ footer { background: #181818; padding: 64px 48px 32px; border-top: 1px solid var
   padding:10px 0;
 }
 
+.floating-call-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:120;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+  background:var(--lime);
+  color:#0D0D0D;
+  border:1px solid rgba(20,20,20,0.2);
+  border-radius:999px;
+  padding:12px 16px;
+  font-family:var(--mono);
+  font-size:0.68rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  box-shadow:0 10px 28px rgba(0,0,0,0.32);
+  transition:transform 0.2s, background 0.2s;
+}
+
+.floating-call-btn:hover{
+  background:var(--lime2);
+  transform:translateY(-2px);
+}
+
+.floating-call-btn .fc-icon{
+  font-size:0.92rem;
+  line-height:1;
+}
+
 @media(max-width:1024px){
   nav{padding:0 24px;}
   .nav-center{display:none;}
@@ -275,4 +307,14 @@ footer { background: #181818; padding: 64px 48px 32px; border-top: 1px solid var
 @media(max-width:640px){
   .footer-top{grid-template-columns:1fr;}
   footer{padding:48px 24px 24px;}
+  .floating-call-btn{
+    right:14px;
+    bottom:14px;
+    width:52px;
+    height:52px;
+    justify-content:center;
+    padding:0;
+    border-radius:50%;
+  }
+  .floating-call-btn .fc-text{display:none;}
 }

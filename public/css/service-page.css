@@ -537,6 +537,9 @@
     }
     .form-submit2:hover { background: var(--lime2); transform: translateY(-1px); }
     .form-note2 { font-family: var(--mono); font-size: 0.62rem; color: rgba(245,242,238,0.45); text-align: center; margin-top: 12px; letter-spacing: 0.08em; }
+    .form-success-msg { display: none; font-family: var(--mono); font-size: 0.64rem; color: var(--green); text-align: center; margin-top: 10px; letter-spacing: 0.06em; }
+    .form-success-msg.show { display: block; }
+    .form-error-msg { min-height: 1.1em; font-family: var(--mono); font-size: 0.62rem; color: #FF8A8A; text-align: center; margin-top: 8px; letter-spacing: 0.06em; }
     .perks-list { display: flex; flex-direction: column; gap: 2px; margin-top: 48px; }
     .perk-row {
       display: flex; align-items: flex-start; gap: 20px;

@@ -12,6 +12,7 @@ class ContactEnquiry extends Model
     protected $fillable = [
         'full_name',
         'email',
+        'phone_number',
         'website_url',
         'company_name',
         'tech_stack',
@@ -20,6 +21,8 @@ class ContactEnquiry extends Model
         'timeline',
         'message',
         'preferred_contact',
+        'enquiry_type',
+        'service_slug',
         'ip_address',
         'user_agent',
     ];

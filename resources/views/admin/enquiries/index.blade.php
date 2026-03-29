@@ -5,8 +5,8 @@
 @section('content')
     <section class="admin-card">
         <div class="admin-card-body">
-            <h1 class="admin-title">Contact Enquiries</h1>
-            <p class="admin-muted">All submitted Technical Strategy Session requests.</p>
+            <h1 class="admin-title">Form Enquiries</h1>
+            <p class="admin-muted">All submissions from contact and service pages.</p>
 
             @if ($enquiries->isEmpty())
                 <div class="admin-empty">No enquiries yet.</div>
@@ -18,7 +18,9 @@
                                 <th>ID</th>
                                 <th>Name</th>
                                 <th>Email</th>
+                                <th>Phone</th>
                                 <th>Goal</th>
+                                <th>Type</th>
                                 <th>Submitted</th>
                                 <th></th>
                             </tr>
@@ -29,7 +31,11 @@
                                     <td>#{{ $enquiry->id }}</td>
                                     <td>{{ $enquiry->full_name }}</td>
                                     <td>{{ $enquiry->email }}</td>
+                                    <td>{{ $enquiry->phone_number ?: '—' }}</td>
                                     <td><span class="admin-chip">{{ $enquiry->primary_goal }}</span></td>
+                                    <td>
+                                        <span class="admin-chip">{{ ucfirst($enquiry->enquiry_type ?: 'contact') }}</span>
+                                    </td>
                                     <td>{{ $enquiry->created_at?->format('M d, Y H:i') }}</td>
                                     <td><a class="admin-link" href="{{ route('admin.enquiries.show', $enquiry) }}">View</a></td>
                                 </tr>
