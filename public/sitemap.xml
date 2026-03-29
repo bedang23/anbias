@@ -1,48 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-    <loc>https://anbias.com</loc>
+    <loc>http://localhost</loc>
             </url>
     <url>
-    <loc>https://anbias.com/contact</loc>
+    <loc>http://localhost/contact</loc>
             </url>
     <url>
-    <loc>https://anbias.com/about</loc>
+    <loc>http://localhost/about</loc>
             </url>
     <url>
-    <loc>https://anbias.com/privacy-policy</loc>
+    <loc>http://localhost/privacy-policy</loc>
             </url>
     <url>
-    <loc>https://anbias.com/terms-and-conditions</loc>
+    <loc>http://localhost/terms-and-conditions</loc>
             </url>
     <url>
-    <loc>https://anbias.com/sitemap</loc>
+    <loc>http://localhost/sitemap</loc>
             </url>
     <url>
-    <loc>https://anbias.com/blogs</loc>
+    <loc>http://localhost/blogs</loc>
             </url>
     <url>
-    <loc>https://anbias.com/case-studies</loc>
+    <loc>http://localhost/case-studies</loc>
             </url>
     <url>
-    <loc>https://anbias.com/services</loc>
+    <loc>http://localhost/services</loc>
             </url>
     <url>
-    <loc>https://anbias.com/services/web-development</loc>
+    <loc>http://localhost/services/web-development</loc>
             </url>
     <url>
-    <loc>https://anbias.com/services/web-security</loc>
+    <loc>http://localhost/services/web-security</loc>
             </url>
     <url>
-    <loc>https://anbias.com/services/ai-development</loc>
+    <loc>http://localhost/services/ai-development</loc>
             </url>
     <url>
-    <loc>https://anbias.com/services/seo</loc>
+    <loc>http://localhost/services/seo</loc>
             </url>
     <url>
-    <loc>https://anbias.com/services/ecommerce</loc>
+    <loc>http://localhost/services/ecommerce</loc>
             </url>
     <url>
-    <loc>https://anbias.com/services/maintenance</loc>
+    <loc>http://localhost/services/maintenance</loc>
+            </url>
+    <url>
+    <loc>http://localhost/blogs/agentic-ai-and-how-it-transforms-the-world-of-it</loc>
+            </url>
+    <url>
+    <loc>http://localhost/blogs/nextjs-15-features-what-changed-and-why-its-better</loc>
+            </url>
+    <url>
+    <loc>http://localhost/case-studies/custom-education-website-seo-growth-case-study</loc>
+            </url>
+    <url>
+    <loc>http://localhost/case-studies/sales-crm-automation-workflow-case-study</loc>
+            </url>
+    <url>
+    <loc>http://localhost/authors/bedang-banerjee</loc>
+            </url>
+    <url>
+    <loc>http://localhost/</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=N;O=D</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=M;O=A</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=S;O=A</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=D;O=A</loc>
+            </url>
+    <url>
+    <loc>http://localhost/wordpress-6.9.4.zip</loc>
+            </url>
+    <url>
+    <loc>http://localhost/poo-wordpress/</loc>
+            </url>
+    <url>
+    <loc>http://localhost/bsp-website/</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=M;O=D</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=S;O=D</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=D;O=D</loc>
+            </url>
+    <url>
+    <loc>http://localhost/?C=N;O=A</loc>
+            </url>
+    <url>
+    <loc>http://localhost/bsp-website/events/</loc>
+            </url>
+    <url>
+    <loc>http://localhost/bsp-website/about-us/</loc>
+            </url>
+    <url>
+    <loc>http://localhost/bsp-website/gallery/</loc>
+            </url>
+    <url>
+    <loc>http://localhost/bsp-website/contact-us/</loc>
+            </url>
+    <url>
+    <loc>http://localhost/bsp-website/news/</loc>
             </url>
 </urlset>

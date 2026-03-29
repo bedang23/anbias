@@ -59,7 +59,7 @@ class GenerateSitemap extends Command
 
         try {
             if (Schema::hasTable('blogs')) {
-                Blog::query()->published()->select('slug')->orderBy('id')->chunkById(100, function ($blogs) use ($sitemap) {
+                Blog::query()->published()->select(['id', 'slug'])->orderBy('id')->chunkById(100, function ($blogs) use ($sitemap) {
                     foreach ($blogs as $blog) {
                         $sitemap->add(Url::create(route('blogs.show', ['slug' => $blog->slug])));
                     }
@@ -67,7 +67,7 @@ class GenerateSitemap extends Command
             }
 
             if (Schema::hasTable('case_studies')) {
-                CaseStudy::query()->published()->select('slug')->orderBy('id')->chunkById(100, function ($caseStudies) use ($sitemap) {
+                CaseStudy::query()->published()->select(['id', 'slug'])->orderBy('id')->chunkById(100, function ($caseStudies) use ($sitemap) {
                     foreach ($caseStudies as $caseStudy) {
                         $sitemap->add(Url::create(route('case-studies.show', ['slug' => $caseStudy->slug])));
                     }
@@ -75,7 +75,7 @@ class GenerateSitemap extends Command
             }
 
             if (Schema::hasTable('authors')) {
-                Author::query()->select('slug')->orderBy('id')->chunkById(100, function ($authors) use ($sitemap) {
+                Author::query()->select(['id', 'slug'])->orderBy('id')->chunkById(100, function ($authors) use ($sitemap) {
                     foreach ($authors as $author) {
                         $sitemap->add(Url::create(route('authors.show', ['slug' => $author->slug])));
                     }
