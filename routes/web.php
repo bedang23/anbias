@@ -1,18 +1,26 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\ContactEnquiryController as AdminContactEnquiryController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\ContactEnquiryController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'home')->name('home');
 Route::view('/contact', 'contact')->name('contact');
 
-Route::post('/contact', function (Request $request) {
-    $request->validate([
-        'full_name' => ['required', 'string', 'max:255'],
-        'email' => ['required', 'email', 'max:255'],
-        'message' => ['required', 'string', 'min:20'],
-        '_hp_field' => ['nullable', 'max:0'],
-    ]);
+Route::post('/contact', [ContactEnquiryController::class, 'store'])->name('contact.store');
 
-    return back()->with('status', 'Thanks. Your strategy session request has been received.');
-})->name('contact.store');
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::middleware('admin.guest')->group(function () {
+        Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');
+        Route::post('/login', [AdminAuthController::class, 'login'])->name('login.submit');
+    });
+
+    Route::middleware('admin.auth')->group(function () {
+        Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
+        Route::get('/enquiries', [AdminContactEnquiryController::class, 'index'])->name('enquiries.index');
+        Route::get('/enquiries/{enquiry}', [AdminContactEnquiryController::class, 'show'])->name('enquiries.show');
+        Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+    });
+});
