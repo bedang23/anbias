@@ -1,0 +1,185 @@
+let currentStep = 1;
+const totalSteps = 3;
+
+function updateProgress(step) {
+  for (let i = 1; i <= totalSteps; i++) {
+    const fpStep = document.getElementById('fpStep' + i);
+    const dot = fpStep?.querySelector('.fp-dot');
+    if (!fpStep || !dot) continue;
+    fpStep.classList.remove('active', 'done');
+    if (i < step) {
+      fpStep.classList.add('done');
+      dot.innerHTML = '✓';
+    } else if (i === step) {
+      fpStep.classList.add('active');
+      dot.innerHTML = i;
+    } else {
+      dot.innerHTML = i;
+    }
+  }
+
+  for (let i = 1; i < totalSteps; i++) {
+    const line = document.getElementById('fpLine' + i);
+    if (line) line.classList.toggle('done', step > i);
+  }
+}
+
+function showStep(step) {
+  document.querySelectorAll('.form-step').forEach((s) => s.classList.remove('active'));
+  const target = document.getElementById('step' + step);
+  if (target) {
+    target.classList.add('active');
+    target.closest('.form-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+  currentStep = step;
+  updateProgress(step);
+}
+
+function validateField(input) {
+  const rule = input.dataset.validate || '';
+  const val = input.value.trim();
+  const id = input.id;
+  const fg = document.getElementById('fg-' + id);
+  if (!fg) return true;
+
+  let valid = true;
+  let msg = '';
+
+  if (rule.includes('required') && !val) {
+    valid = false;
+    msg = 'This field is required.';
+  } else if (rule.includes('email') && val && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)) {
+    valid = false;
+    msg = 'Enter a valid email address.';
+  } else if (rule.includes('url') && val && !/^https?:\/\/.+\..+/.test(val)) {
+    valid = false;
+    msg = 'Enter a valid URL starting with https://';
+  } else if (rule.includes('minlen')) {
+    const min = parseInt(rule.match(/minlen:(\d+)/)?.[1] || 0, 10);
+    if (val.length < min) {
+      valid = false;
+      msg = `Minimum ${min} characters required.`;
+    }
+  }
+
+  const errEl = document.getElementById('err-' + id);
+  if (errEl && msg) errEl.textContent = msg;
+
+  fg.classList.toggle('is-valid', valid && val.length > 0);
+  fg.classList.toggle('is-error', !valid);
+  return valid;
+}
+
+document.querySelectorAll('[data-validate]').forEach((input) => {
+  input.addEventListener('blur', () => validateField(input));
+  input.addEventListener('input', () => {
+    const fg = document.getElementById('fg-' + input.id);
+    if (fg && fg.classList.contains('is-error')) validateField(input);
+  });
+});
+
+function validateStep(step) {
+  let allValid = true;
+
+  if (step === 1) {
+    ['fullName', 'email'].forEach((id) => {
+      const el = document.getElementById(id);
+      if (el && !validateField(el)) allValid = false;
+    });
+
+    const ws = document.getElementById('website');
+    if (ws && ws.value.trim() && !validateField(ws)) allValid = false;
+  } else if (step === 2) {
+    const goalVal = document.getElementById('goalValue').value;
+    const fg = document.getElementById('fg-goal');
+    if (!goalVal) {
+      allValid = false;
+      fg.classList.add('is-error');
+      fg.querySelector('.field-error').style.display = 'block';
+    }
+  } else if (step === 3) {
+    const msg = document.getElementById('message');
+    if (!validateField(msg)) allValid = false;
+  }
+
+  return allValid;
+}
+
+function goToStep(step) {
+  if (step > currentStep && !validateStep(currentStep)) return;
+  showStep(step);
+}
+
+document.querySelectorAll('.stack-pill').forEach((pill) => {
+  pill.addEventListener('click', () => {
+    pill.classList.toggle('selected');
+    const selected = [...document.querySelectorAll('.stack-pill.selected')].map((p) => p.dataset.val);
+    document.getElementById('stackValue').value = selected.join(', ');
+  });
+});
+
+function selectGoal(el) {
+  document.querySelectorAll('.goal-card').forEach((c) => c.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('goalValue').value = el.dataset.val;
+  const fg = document.getElementById('fg-goal');
+  if (fg) {
+    fg.classList.remove('is-error');
+    fg.querySelector('.field-error').style.display = 'none';
+  }
+}
+
+function selectBudget(el) {
+  document.querySelectorAll('.budget-opt').forEach((o) => o.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('budgetValue').value = el.dataset.val;
+}
+
+function selectTimeline(el) {
+  document.querySelectorAll('.timeline-opt').forEach((o) => o.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('timelineValue').value = el.dataset.val;
+}
+
+document.getElementById('contactForm')?.addEventListener('submit', async function (e) {
+  if (!validateStep(3)) {
+    e.preventDefault();
+    return;
+  }
+
+  const btn = document.getElementById('submitBtn');
+  const label = document.getElementById('submitLabel');
+  const arrow = document.getElementById('submitArrow');
+
+  if (btn && label && arrow) {
+    btn.disabled = true;
+    label.textContent = 'Sending...';
+    arrow.textContent = '⏳';
+  }
+});
+
+document.querySelectorAll('.btn-next, .btn-submit').forEach((btn) => {
+  btn.addEventListener('mousemove', (e) => {
+    const r = btn.getBoundingClientRect();
+    const x = e.clientX - r.left - r.width / 2;
+    const y = e.clientY - r.top - r.height / 2;
+    btn.style.transform = `translate(${x * 0.18}px, ${y * 0.25}px)`;
+  });
+
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+  });
+});
+
+const textarea = document.getElementById('message');
+if (textarea) {
+  const counter = document.createElement('span');
+  counter.style.cssText = 'font-family:var(--mono);font-size:0.58rem;color:var(--text3);letter-spacing:0.06em;display:block;text-align:right;margin-top:4px';
+  textarea.parentNode.appendChild(counter);
+
+  textarea.addEventListener('input', () => {
+    const len = textarea.value.length;
+    counter.textContent = len + ' chars' + (len < 20 ? ` — ${20 - len} more to go` : '');
+    counter.style.color = len >= 20 ? 'rgba(74,222,128,0.7)' : 'var(--text3)';
+  });
+}
