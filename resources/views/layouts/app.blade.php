@@ -8,9 +8,7 @@
         $seoTitle = trim($__env->yieldContent('title', 'Anbias | Build Smarter. Ship Faster. Stay Secure.'));
         $seoDescription = trim($__env->yieldContent('meta_description', 'Anbias delivers AI-powered web development and web security for ambitious businesses.'));
         $canonicalUrl = trim($__env->yieldContent('canonical', url()->current()));
-        $defaultOgImage = file_exists(public_path('images/og-anbias.png'))
-            ? asset('images/og-anbias.png')
-            : asset('images/og-anbias.svg');
+        $defaultOgImage = asset('images/og-anbias.png');
         $ogImage = trim($__env->yieldContent('og_image', $defaultOgImage));
     @endphp
 
