@@ -518,7 +518,7 @@ $serviceMeta = [
             <div class="qc-val">150+</div>
             <div class="qc-body">
               <div class="qc-label">Projects Shipped</div>
-              <div class="qc-sub">For startups, enterprises, and growing businesses across the US and India since 2024</div>
+              <div class="qc-sub">For startups, enterprises, and growing businesses across the US and India since 2021</div>
             </div>
           </div>
         </div>
