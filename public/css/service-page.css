@@ -648,7 +648,7 @@
       nav{padding:0 24px;} .nav-center{display:none;} .hamburger{display:flex;}
       .breadcrumb{padding:0 24px;}
       section{padding:80px 24px;}
-      .hero{padding:0 24px 56px;}
+      .hero{padding:128px 24px 56px;}
       .hero-bottom{grid-template-columns:1fr;}
       .hero-cta-group{align-items:flex-start;}
       .hero-tech-float{display:none;}

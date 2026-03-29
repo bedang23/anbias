@@ -236,7 +236,10 @@
     .panel-cta:hover { border-color: var(--lime); }
 
     /* ── CONSULT ── */
-    .consult-sec { background: var(--bg2); }
+    .consult-sec { 
+      background: var(--bg2); 
+      padding: 128px 48px;
+    }
     .consult-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; width: 100%; }
     .consult-form-wrap {
       background: #282828;
@@ -507,7 +510,8 @@
 
 @media(max-width:1024px){
   section{padding:80px 24px;}
-  .hero{padding:0 24px 56px;}
+  .hero{padding:88px 24px 56px;}
+  .scroll-hint{display:none;}
   .hero-bottom{grid-template-columns:1fr;}
   .hero-cta-group{align-items:flex-start;}
   .services-layout{grid-template-columns:1fr;}

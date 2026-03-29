@@ -36,6 +36,7 @@
         <span class="fc-text">Call Now</span>
     </a>
 
+    <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
     <script defer src="{{ asset('js/global.js') }}"></script>
 
     @stack('scripts')
