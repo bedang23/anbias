@@ -23,7 +23,7 @@
       <span class="dash"></span>
       AI-Powered Web Studio
       <span class="blink">_</span>
-      EST. 2024 — IND/USA
+      EST. 2021 — IND/USA
     </div>
 
     <h1 class="hero-title">
