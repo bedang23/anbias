@@ -16,7 +16,7 @@
         <header class="admin-header">
             <div class="admin-header-left">
                 <div class="admin-brand">
-                    <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="admin-brand-logo">
+                    <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="admin-brand-logo" width="30" height="30" decoding="async">
                 </div>
                 <nav class="admin-nav">
                     <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">Dashboard</a>

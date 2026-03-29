@@ -3,7 +3,7 @@
     <div class="footer-top">
       <div>
         <a href="{{ route('home') }}" class="f-logo">
-          <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="f-logo-mark">
+          <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="f-logo-mark" width="65" height="65" decoding="async">
         </a>
         <p class="f-desc">AI-powered web development and security for ambitious businesses. Building the future of the web - one pixel at a time.</p>
         <div class="f-contact">

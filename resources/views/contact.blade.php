@@ -417,6 +417,8 @@
         <iframe
           src="https://maps.google.com/maps?q=23%20SBI%20Colony%20Tagore%20Nagar%20Raipur&t=&z=14&ie=UTF8&iwloc=&output=embed"
           title="Anbias HQ — 23 SBI Colony Tagore Nagar"
+          width="600"
+          height="220"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
           aria-label="Map showing Anbias headquarters at 23 SBI Colony Tagore Nagar">

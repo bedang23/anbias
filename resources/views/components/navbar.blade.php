@@ -13,7 +13,7 @@ $currentServiceSlug = request()->route('slug');
 
 <nav id="navbar">
   <a href="{{ route('home') }}" class="nav-logo">
-    <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="nav-logo-mark">
+    <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="nav-logo-mark" width="44" height="44" decoding="async">
   </a>
 
   <ul class="nav-center">

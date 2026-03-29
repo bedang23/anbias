@@ -15,7 +15,7 @@
     <div class="admin-login-wrap">
         <div class="admin-login-card">
             <div class="admin-brand">
-                <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="admin-brand-logo">
+                <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="admin-brand-logo" width="30" height="30" decoding="async">
             </div>
             <h1>Sign in</h1>
             <p>Use your seeded administrator username and password.</p>
