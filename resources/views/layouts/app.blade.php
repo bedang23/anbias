@@ -4,12 +4,43 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title', 'Anbias | Build Smarter. Ship Faster. Stay Secure.')</title>
-    <meta name="description" content="@yield('meta_description', 'Anbias delivers AI-powered web development and web security for ambitious businesses.')">
-    <meta name="robots" content="@yield('meta_robots', 'index,follow')">
-    <link rel="canonical" href="@yield('canonical', url()->current())">
+    @php
+        $seoTitle = trim($__env->yieldContent('title', 'Anbias | Build Smarter. Ship Faster. Stay Secure.'));
+        $seoDescription = trim($__env->yieldContent('meta_description', 'Anbias delivers AI-powered web development and web security for ambitious businesses.'));
+        $canonicalUrl = trim($__env->yieldContent('canonical', url()->current()));
+        $defaultOgImage = file_exists(public_path('images/og-anbias.png'))
+            ? asset('images/og-anbias.png')
+            : asset('images/og-anbias.svg');
+        $ogImage = trim($__env->yieldContent('og_image', $defaultOgImage));
+    @endphp
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Anbias","url":"https://anbias.com","telephone":"+91-8109109960","email":"contact@anbias.com","description":"AI-powered web development, web security & digital solutions","areaServed":["US","IN"],"offers":{"@type":"Offer","name":"Free Website Consultancy","price":"0","priceCurrency":"USD"}}</script>
+    <title>{{ $seoTitle }}</title>
+    <meta name="description" content="{{ $seoDescription }}">
+    <meta name="robots" content="@yield('meta_robots', 'index,follow')">
+    <link rel="canonical" href="{{ $canonicalUrl }}">
+
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:site_name" content="Anbias">
+    <meta property="og:title" content="{{ trim($__env->yieldContent('og_title', $seoTitle)) }}">
+    <meta property="og:description" content="{{ trim($__env->yieldContent('og_description', $seoDescription)) }}">
+    <meta property="og:url" content="{{ $canonicalUrl }}">
+    <meta property="og:image" content="{{ $ogImage }}">
+    <meta property="og:image:secure_url" content="{{ $ogImage }}">
+    <meta property="og:image:alt" content="Anbias - AI-powered web development and security">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ trim($__env->yieldContent('twitter_title', $seoTitle)) }}">
+    <meta name="twitter:description" content="{{ trim($__env->yieldContent('twitter_description', $seoDescription)) }}">
+    <meta name="twitter:image" content="{{ $ogImage }}">
+
+    <link rel="alternate" hreflang="en-us" href="https://anbias.com/" />
+    <link rel="alternate" hreflang="en-ae" href="https://anbias.com/" />
+    <link rel="alternate" hreflang="en-in" href="https://anbias.com/" />
+    <link rel="alternate" hreflang="x-default" href="https://anbias.com/" />
+
+    @if (request()->routeIs('home'))
+        @include('partials.schema')
+    @endif
 
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>

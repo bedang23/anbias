@@ -292,6 +292,23 @@
 .field-group input::placeholder,
 .field-group textarea::placeholder { color: rgba(245,242,238,0.25); }
 
+.field-group .iti { width: 100%; }
+.field-group .iti input { padding-left: 52px !important; }
+.field-group .iti__country-container { z-index: 4; }
+.field-group .iti__selected-country {
+  padding: 0 8px 0 12px;
+  border-right: 1px solid rgba(245,242,238,0.12);
+}
+.field-group .iti__selected-dial-code,
+.field-group .iti__arrow { color: rgba(245,242,238,0.7); }
+.iti__dropdown-content {
+  background: #161616;
+  border: 1px solid var(--border2);
+  color: var(--text);
+}
+.iti__country.iti__highlight { background: rgba(200,241,53,0.08); }
+.iti__dial-code { color: rgba(245,242,238,0.55); }
+
 .field-group select { cursor: pointer; }
 .field-group select option { background: #1C1C1C; color: var(--text); }
 .field-group textarea { resize: vertical; min-height: 100px; line-height: 1.6; }

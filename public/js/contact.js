@@ -1,5 +1,18 @@
 let currentStep = 1;
 const totalSteps = 3;
+const phoneInput = document.getElementById('phone');
+let intlPhone = null;
+
+if (phoneInput && typeof window.intlTelInput === 'function') {
+  intlPhone = window.intlTelInput(phoneInput, {
+    initialCountry: 'in',
+    preferredCountries: ['in', 'us', 'ae'],
+    onlyCountries: ['in', 'us', 'ae'],
+    nationalMode: false,
+    autoPlaceholder: 'aggressive',
+    utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js',
+  });
+}
 
 function updateProgress(step) {
   for (let i = 1; i <= totalSteps; i++) {
@@ -54,6 +67,9 @@ function validateField(input) {
   } else if (rule.includes('url') && val && !/^https?:\/\/.+\..+/.test(val)) {
     valid = false;
     msg = 'Enter a valid URL starting with https://';
+  } else if (id === 'phone' && val && intlPhone && !intlPhone.isValidNumber()) {
+    valid = false;
+    msg = 'Please enter a valid phone number with country code.';
   } else if (rule.includes('minlen')) {
     const min = parseInt(rule.match(/minlen:(\d+)/)?.[1] || 0, 10);
     if (val.length < min) {
@@ -77,6 +93,12 @@ document.querySelectorAll('[data-validate]').forEach((input) => {
     if (fg && fg.classList.contains('is-error')) validateField(input);
   });
 });
+
+if (phoneInput && intlPhone) {
+  phoneInput.addEventListener('countrychange', () => {
+    if (phoneInput.value.trim().length > 0) validateField(phoneInput);
+  });
+}
 
 const formStartedAt = document.getElementById('formStartedAt');
 if (formStartedAt) {
@@ -190,6 +212,13 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
     arrow.textContent = '⏳';
   }
 
+  if (phoneInput && intlPhone) {
+    const normalizedPhone = intlPhone.getNumber();
+    if (normalizedPhone) {
+      phoneInput.value = normalizedPhone;
+    }
+  }
+
   try {
     const res = await fetch(form.dataset.action || form.action, {
       method: 'POST',
@@ -221,6 +250,10 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
       successBox.classList.add('show');
     }
     form.reset();
+    if (phoneInput && intlPhone) {
+      intlPhone.setCountry('in');
+      phoneInput.value = '';
+    }
     if (formStartedAt) {
       formStartedAt.value = Math.floor(Date.now() / 1000).toString();
     }

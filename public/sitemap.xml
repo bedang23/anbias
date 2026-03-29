@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+    <url>
+    <loc>https://anbias.com</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/contact</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/about</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/privacy-policy</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/terms-and-conditions</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/sitemap</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/services</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/services/web-development</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/services/web-security</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/services/ai-development</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/services/seo</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/services/ecommerce</loc>
+            </url>
+    <url>
+    <loc>https://anbias.com/services/maintenance</loc>
+            </url>
+</urlset>

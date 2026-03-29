@@ -4,6 +4,7 @@
 @section('meta_description', 'Request a free technical strategy session with an Anbias Senior Architect.')
 
 @push('styles')
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/css/intlTelInput.css">
 <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 @endpush
 
@@ -456,5 +457,7 @@
 @endsection
 
 @push('scripts')
+<script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/intlTelInput.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js"></script>
 <script defer src="{{ asset('js/contact.js') }}"></script>
 @endpush
