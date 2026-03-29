@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Next.js 15 blog featured image">
+  <rect width="1200" height="630" fill="#141414"/>
+  <circle cx="980" cy="140" r="150" fill="#C8F135" fill-opacity="0.18"/>
+  <circle cx="140" cy="520" r="120" fill="#C8F135" fill-opacity="0.12"/>
+  <text x="90" y="180" fill="#C8F135" font-family="JetBrains Mono, monospace" font-size="28" letter-spacing="2">ANBIAS ENGINEERING BLOG</text>
+  <text x="90" y="300" fill="#F5F2EE" font-family="Syne, sans-serif" font-weight="700" font-size="80">Next.js 15</text>
+  <text x="90" y="380" fill="#F5F2EE" font-family="Syne, sans-serif" font-weight="700" font-size="56">What Changed and Why It Is Better</text>
+  <line x1="90" y1="425" x2="1110" y2="425" stroke="#C8F135" stroke-opacity="0.3"/>
+</svg>

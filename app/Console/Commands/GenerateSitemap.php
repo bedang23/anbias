@@ -2,7 +2,11 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Author;
+use App\Models\Blog;
+use App\Models\CaseStudy;
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\URL as UrlFacade;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\SitemapGenerator;
@@ -40,6 +44,8 @@ class GenerateSitemap extends Command
             'privacy',
             'terms',
             'sitemap',
+            'blogs.index',
+            'case-studies.index',
             'services.index',
         ];
 
@@ -49,6 +55,34 @@ class GenerateSitemap extends Command
 
         foreach ($this->serviceSlugs() as $slug) {
             $sitemap->add(Url::create(route('services.show', ['slug' => $slug])));
+        }
+
+        try {
+            if (Schema::hasTable('blogs')) {
+                Blog::query()->published()->select('slug')->orderBy('id')->chunkById(100, function ($blogs) use ($sitemap) {
+                    foreach ($blogs as $blog) {
+                        $sitemap->add(Url::create(route('blogs.show', ['slug' => $blog->slug])));
+                    }
+                });
+            }
+
+            if (Schema::hasTable('case_studies')) {
+                CaseStudy::query()->published()->select('slug')->orderBy('id')->chunkById(100, function ($caseStudies) use ($sitemap) {
+                    foreach ($caseStudies as $caseStudy) {
+                        $sitemap->add(Url::create(route('case-studies.show', ['slug' => $caseStudy->slug])));
+                    }
+                });
+            }
+
+            if (Schema::hasTable('authors')) {
+                Author::query()->select('slug')->orderBy('id')->chunkById(100, function ($authors) use ($sitemap) {
+                    foreach ($authors as $author) {
+                        $sitemap->add(Url::create(route('authors.show', ['slug' => $author->slug])));
+                    }
+                });
+            }
+        } catch (Throwable $e) {
+            $this->warn('Database URL expansion skipped: '.$e->getMessage());
         }
 
         try {

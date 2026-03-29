@@ -35,6 +35,8 @@
           <a class="info-link" href="{{ route('contact') }}"><span>Contact</span><span>↗</span></a>
           <a class="info-link" href="{{ route('about') }}"><span>About Us</span><span>↗</span></a>
           <a class="info-link" href="{{ route('services.index') }}"><span>Services</span><span>↗</span></a>
+          <a class="info-link" href="{{ route('blogs.index') }}"><span>Blog</span><span>↗</span></a>
+          <a class="info-link" href="{{ route('case-studies.index') }}"><span>Case Studies</span><span>↗</span></a>
         </div>
       </article>
 

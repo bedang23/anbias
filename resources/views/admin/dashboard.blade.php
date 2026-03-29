@@ -6,7 +6,7 @@
     <section class="admin-card">
         <div class="admin-card-body">
             <h1 class="admin-title">Welcome back, {{ session('admin_auth.name') }}.</h1>
-            <p class="admin-muted">Minimal control panel for contact strategy-session enquiries.</p>
+            <p class="admin-muted">Control panel for enquiries, blogs, case studies, categories, and author profiles.</p>
 
             <div class="admin-grid">
                 <article class="admin-stat">
@@ -22,6 +22,26 @@
                 <article class="admin-stat">
                     <h3>Quick action</h3>
                     <p><a class="admin-link" href="{{ route('admin.enquiries.index') }}">Open enquiries →</a></p>
+                </article>
+
+                <article class="admin-stat">
+                    <h3>Blogs</h3>
+                    <p>{{ number_format($blogCount) }}</p>
+                </article>
+
+                <article class="admin-stat">
+                    <h3>Case studies</h3>
+                    <p>{{ number_format($caseStudyCount) }}</p>
+                </article>
+
+                <article class="admin-stat">
+                    <h3>Categories</h3>
+                    <p>{{ number_format($categoryCount) }}</p>
+                </article>
+
+                <article class="admin-stat">
+                    <h3>Authors</h3>
+                    <p>{{ number_format($authorCount) }}</p>
                 </article>
             </div>
         </div>

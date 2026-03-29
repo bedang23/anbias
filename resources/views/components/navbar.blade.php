@@ -33,6 +33,8 @@ $currentServiceSlug = request()->route('slug');
       </div>
     </li>
 
+    <li><a href="{{ route('case-studies.index') }}" class="{{ request()->routeIs('case-studies.*') ? 'active' : '' }}">Case Studies</a></li>
+    <li><a href="{{ route('blogs.index') }}" class="{{ request()->routeIs('blogs.*') ? 'active' : '' }}">Blog</a></li>
     <li><a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'active' : '' }}">Contact</a></li>
   </ul>
 
@@ -44,6 +46,8 @@ $currentServiceSlug = request()->route('slug');
 
 <div class="m-nav" id="mNav">
   <a href="{{ route('home') }}" onclick="toggleMobileNav()">Home</a>
+  <a href="{{ route('blogs.index') }}" onclick="toggleMobileNav()">Blog</a>
+  <a href="{{ route('case-studies.index') }}" onclick="toggleMobileNav()">Case Studies</a>
   <a href="{{ route('contact') }}" onclick="toggleMobileNav()">Contact</a>
 
   <div class="m-nav-group-label">Services</div>

@@ -1,8 +1,15 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\AuthorController as AdminAuthorController;
+use App\Http\Controllers\Admin\BlogController as AdminBlogController;
+use App\Http\Controllers\Admin\CaseStudyController as AdminCaseStudyController;
+use App\Http\Controllers\Admin\CategoryController as AdminCategoryController;
 use App\Http\Controllers\Admin\ContactEnquiryController as AdminContactEnquiryController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\AuthorProfileController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CaseStudyController;
 use App\Http\Controllers\ContactEnquiryController;
 use App\Http\Controllers\ServicePageController;
 use Illuminate\Support\Facades\Route;
@@ -13,6 +20,11 @@ Route::view('/about', 'pages.about')->name('about');
 Route::view('/privacy-policy', 'pages.privacy')->name('privacy');
 Route::view('/terms-and-conditions', 'pages.terms')->name('terms');
 Route::view('/sitemap', 'pages.sitemap')->name('sitemap');
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogs.index');
+Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
+Route::get('/case-studies', [CaseStudyController::class, 'index'])->name('case-studies.index');
+Route::get('/case-studies/{slug}', [CaseStudyController::class, 'show'])->name('case-studies.show');
+Route::get('/authors/{slug}', [AuthorProfileController::class, 'show'])->name('authors.show');
 Route::get('/services', [ServicePageController::class, 'index'])->name('services.index');
 Route::get('/services/{slug}', [ServicePageController::class, 'show'])->name('services.show');
 Route::post('/services/enquiry', [ContactEnquiryController::class, 'storeService'])->name('services.enquiry.store');
@@ -29,6 +41,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/', [AdminDashboardController::class, 'index'])->name('dashboard');
         Route::get('/enquiries', [AdminContactEnquiryController::class, 'index'])->name('enquiries.index');
         Route::get('/enquiries/{enquiry}', [AdminContactEnquiryController::class, 'show'])->name('enquiries.show');
+        Route::resource('authors', AdminAuthorController::class)->except(['show']);
+        Route::resource('categories', AdminCategoryController::class)->except(['show']);
+        Route::resource('blogs', AdminBlogController::class)->except(['show']);
+        Route::resource('case-studies', AdminCaseStudyController::class)->except(['show']);
         Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
     });
 });

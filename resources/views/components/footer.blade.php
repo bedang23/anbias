@@ -28,6 +28,8 @@
         <h5>Company</h5>
         <ul>
           <li><a href="{{ route('about') }}">About Us</a></li>
+          <li><a href="{{ route('blogs.index') }}">Blog</a></li>
+          <li><a href="{{ route('case-studies.index') }}">Case Studies</a></li>
           <li><a href="{{ route('privacy') }}">Privacy Policy</a></li>
           <li><a href="{{ route('terms') }}">Terms & Conditions</a></li>
         </ul>
