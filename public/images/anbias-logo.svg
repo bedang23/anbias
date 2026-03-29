@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Anbias logo" shape-rendering="geometricPrecision">
+  <path fill="#FF2A23" d="M110 70h214v86H196v166h-86V130z"/>
+  <path fill="#FF2A23" d="M110 130l86-60v86l-86 60z"/>
+  <path fill="#3F7FF3" d="M110 322h214l-124 108H110z"/>
+  <path fill="#3F7FF3" d="M110 430h86v82h-86z"/>
+  <rect fill="#FFC400" x="324" y="156" width="92" height="92"/>
+  <path fill="#C8F135" d="M324 248l92 92v172h-92z"/>
+</svg>

@@ -18,7 +18,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="{{ asset('css/global.css') }}">
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/anbias-logo.svg') }}">
+    <link rel="shortcut icon" href="{{ asset('images/anbias-logo.svg') }}">
     @stack('styles')
 </head>
 

@@ -43,7 +43,7 @@ body.admin-body {
 .admin-brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
   margin-bottom: 18px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -51,11 +51,11 @@ body.admin-body {
   color: var(--admin-accent);
 }
 
-.admin-brand-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #c8f135;
+.admin-brand-logo {
+  width: 30px;
+  height: 30px;
+  display: block;
+  flex-shrink: 0;
 }
 
 .admin-login-card h1 {

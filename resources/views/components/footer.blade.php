@@ -2,12 +2,13 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <a href="{{ route('home') }}" class="f-logo">AN<span>BIAS</span></a>
+        <a href="{{ route('home') }}" class="f-logo">
+          <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="f-logo-mark">
+        </a>
         <p class="f-desc">AI-powered web development and security for ambitious businesses. Building the future of the web - one pixel at a time.</p>
         <div class="f-contact">
           <a href="tel:+918109109960">📞 +91 8109109960</a>
           <a href="mailto:contact@anbias.com">✉ contact@anbias.com</a>
-          <a href="https://anbias.com" target="_blank" rel="noopener">🌐 anbias.com</a>
         </div>
       </div>
 
@@ -44,7 +45,7 @@
     </div>
 
     <div class="footer-bottom">
-      <span>© {{ now()->year }} ANBIAS. ALL RIGHTS RESERVED.</span>
+      <span>© {{ now()->year }} ALL RIGHTS RESERVED.</span>
       <span><a href="{{ route('privacy') }}">PRIVACY</a> · <a href="{{ route('terms') }}">TERMS</a> · <a href="{{ route('sitemap') }}">SITEMAP</a></span>
       <span>MADE WITH AI IN INDIA 🇮🇳</span>
     </div>

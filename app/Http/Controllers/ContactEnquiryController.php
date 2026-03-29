@@ -170,9 +170,17 @@ class ContactEnquiryController extends Controller
         $notificationEmail = config('mail.enquiry_notification_to');
 
         if (!empty($notificationEmail)) {
-            Mail::to($notificationEmail)->send(new EnquiryAdminNotificationMail($enquiry));
+            try {
+                Mail::to($notificationEmail)->send(new EnquiryAdminNotificationMail($enquiry));
+            } catch (\Throwable $e) {
+                report($e);
+            }
         }
 
-        Mail::to($enquiry->email)->send(new EnquiryUserAcknowledgementMail($enquiry));
+        try {
+            Mail::to($enquiry->email)->send(new EnquiryUserAcknowledgementMail($enquiry));
+        } catch (\Throwable $e) {
+            report($e);
+        }
     }
 }

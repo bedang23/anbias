@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'Admin Panel')</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/anbias-logo.svg') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +15,9 @@
     <div class="admin-shell">
         <header class="admin-header">
             <div class="admin-header-left">
-                <div class="admin-brand"><span class="admin-brand-dot"></span>ANBIAS ADMIN</div>
+                <div class="admin-brand">
+                    <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="admin-brand-logo">
+                </div>
                 <nav class="admin-nav">
                     <a href="{{ route('admin.dashboard') }}" class="{{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">Dashboard</a>
                     <a href="{{ route('admin.enquiries.index') }}" class="{{ request()->routeIs('admin.enquiries.*') ? 'active' : '' }}">Enquiries</a>

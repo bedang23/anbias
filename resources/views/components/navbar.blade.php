@@ -12,7 +12,9 @@ $currentServiceSlug = request()->route('slug');
 @endphp
 
 <nav id="navbar">
-  <a href="{{ route('home') }}" class="nav-logo">ANBIAS</a>
+  <a href="{{ route('home') }}" class="nav-logo">
+    <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="nav-logo-mark">
+  </a>
 
   <ul class="nav-center">
     <li><a href="{{ route('home') }}" class="{{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>

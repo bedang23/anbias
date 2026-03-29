@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Login | Anbias</title>
+    <link rel="icon" type="image/svg+xml" href="{{ asset('images/anbias-logo.svg') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,9 @@
 <body class="admin-body">
     <div class="admin-login-wrap">
         <div class="admin-login-card">
-            <div class="admin-brand"><span class="admin-brand-dot"></span>ANBIAS ADMIN</div>
+            <div class="admin-brand">
+                <img src="{{ asset('images/anbias-logo.svg') }}" alt="Anbias" class="admin-brand-logo">
+            </div>
             <h1>Sign in</h1>
             <p>Use your seeded administrator username and password.</p>
 
