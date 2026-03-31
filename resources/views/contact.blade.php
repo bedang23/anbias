@@ -380,7 +380,7 @@
         <div class="channel-icon-wrap">💬</div>
         <div class="channel-body">
           <div class="channel-type">WhatsApp</div>
-          <div class="channel-label">+91 8223830302</div>
+          <div class="channel-label">+91 8719036405</div>
           <div class="channel-note">Fastest response · Usually instant</div>
         </div>
       </a>
