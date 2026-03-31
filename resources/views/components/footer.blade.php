@@ -49,7 +49,7 @@
     <div class="footer-bottom">
       <span>© {{ now()->year }} ALL RIGHTS RESERVED.</span>
       <span><a href="{{ route('privacy') }}">PRIVACY</a> · <a href="{{ route('terms') }}">TERMS</a> · <a href="{{ route('sitemap') }}">SITEMAP</a></span>
-      <span>MADE WITH AI IN INDIA 🇮🇳</span>
+      <span>MADE IN INDIA 🇮🇳</span>
     </div>
   </div>
 </footer>

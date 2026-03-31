@@ -3,7 +3,7 @@
       min-height: 100vh;
       display: flex; flex-direction: column;
       justify-content: flex-end;
-      padding: 0 48px 64px;
+      padding: 104px 48px 64px;
       position: relative; overflow: hidden;
     }
 

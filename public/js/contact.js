@@ -7,8 +7,8 @@ if (phoneInput && typeof window.intlTelInput === 'function') {
   intlPhone = window.intlTelInput(phoneInput, {
     initialCountry: 'in',
     preferredCountries: ['in', 'us', 'ae'],
-    onlyCountries: ['in', 'us', 'ae'],
-    nationalMode: false,
+    nationalMode: true,
+    dropdownContainer: document.body,
     autoPlaceholder: 'aggressive',
     utilsScript: 'https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.0/build/js/utils.js',
   });
@@ -67,9 +67,20 @@ function validateField(input) {
   } else if (rule.includes('url') && val && !/^https?:\/\/.+\..+/.test(val)) {
     valid = false;
     msg = 'Enter a valid URL starting with https://';
-  } else if (id === 'phone' && val && intlPhone && !intlPhone.isValidNumber()) {
-    valid = false;
-    msg = 'Please enter a valid phone number with country code.';
+  } else if (id === 'phone' && val) {
+    const hasIntlUtils = typeof window.intlTelInputUtils !== 'undefined';
+    if (intlPhone && hasIntlUtils) {
+      if (!intlPhone.isValidNumber()) {
+        valid = false;
+        msg = 'Please enter a valid phone number.';
+      }
+    } else {
+      const digitsOnly = val.replace(/\D/g, '');
+      if (!/^[0-9+()\-\s]{7,40}$/.test(val) || digitsOnly.length < 7 || digitsOnly.length > 15) {
+        valid = false;
+        msg = 'Please enter a valid phone number.';
+      }
+    }
   } else if (rule.includes('minlen')) {
     const min = parseInt(rule.match(/minlen:(\d+)/)?.[1] || 0, 10);
     if (val.length < min) {

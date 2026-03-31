@@ -305,9 +305,12 @@
   background: #161616;
   border: 1px solid var(--border2);
   color: var(--text);
+  max-height: min(360px, 60vh);
+  overflow-y: auto;
 }
 .iti__country.iti__highlight { background: rgba(200,241,53,0.08); }
 .iti__dial-code { color: rgba(245,242,238,0.55); }
+.iti--container { z-index: 1400; }
 
 .field-group select { cursor: pointer; }
 .field-group select option { background: #1C1C1C; color: var(--text); }
