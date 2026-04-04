@@ -36,7 +36,7 @@
 
   <div class="admin-field admin-field-wide">
     <label for="content">Main Content</label>
-    <textarea id="contentEditor" class="admin-input admin-textarea" name="content" rows="14" required>{{ old('content', $caseStudy->content) }}</textarea>
+    <textarea id="contentEditor" class="admin-input admin-textarea" name="content" rows="14">{{ old('content', $caseStudy->content) }}</textarea>
   </div>
 
   <div class="admin-field">

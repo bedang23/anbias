@@ -85,7 +85,7 @@ class CaseStudyController extends Controller
             'category_id' => ['required', 'integer', Rule::exists('categories', 'id')->where('type', Category::TYPE_CASE_STUDY)],
             'excerpt' => ['required', 'string', 'max:1500'],
             'content' => ['required', 'string'],
-            'featured_image' => [$imageRequired ? 'required' : 'nullable', 'image', 'max:4096'],
+            'featured_image' => [$imageRequired ? 'required' : 'nullable', 'image', 'max:2048'],
             'is_published' => ['nullable', 'boolean'],
             'published_at' => ['nullable', 'date'],
             'meta_title' => ['required', 'string', 'max:255'],
