@@ -50,6 +50,15 @@
     <link rel="icon" type="image/svg+xml" href="{{ asset('images/anbias-logo.svg') }}">
     <link rel="shortcut icon" href="{{ asset('images/anbias-logo.svg') }}">
     @stack('styles')
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9GGD110NCT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9GGD110NCT');
+    </script>
 </head>
 
 <body>

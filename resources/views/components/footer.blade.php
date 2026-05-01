@@ -7,7 +7,7 @@
         </a>
         <p class="f-desc">AI-powered web development and security for ambitious businesses. Building the future of the web - one pixel at a time.</p>
         <div class="f-contact">
-          <a href="tel:+918109109960">📞 +91 8223830302</a>
+          <a href="tel:+918109109960">📞 +91 8109109960</a>
           <a href="mailto:contact@anbias.com">✉ contact@anbias.com</a>
         </div>
       </div>

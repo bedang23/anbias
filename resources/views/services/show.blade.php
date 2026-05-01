@@ -710,7 +710,7 @@ $serviceMeta = [
     <div class="pricing-grid2 rv d1">
       <div class="pc">
         <div class="pc-tier">Starter</div>
-        <div class="pc-price"><sup>$</sup>799</div>
+        <div class="pc-price"><sup>₹</sup>39,999</div>
         <div class="pc-freq">one-time · 7-10 day delivery</div>
         <ul class="pc-list">
           <li><span class="ck">✓</span> Up to 5 pages</li>
@@ -725,7 +725,7 @@ $serviceMeta = [
       <div class="pc featured">
         <div class="pc-badge">Most Popular</div>
         <div class="pc-tier">Growth</div>
-        <div class="pc-price"><sup>$</sup>2,199</div>
+        <div class="pc-price"><sup>₹</sup>99,999</div>
         <div class="pc-freq">one-time · 10-18 day delivery</div>
         <ul class="pc-list">
           <li><span class="ck">✓</span> Up to 15 pages / sections</li>
@@ -828,4 +828,64 @@ $serviceMeta = [
     <a href="mailto:contact@anbias.com" class="btn-ghost">contact@anbias.com</a>
   </div>
 </div>
+
+@push('scripts')
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How fast can you actually deliver a website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard 5-8 page business website typically ships in 7-14 days. This is possible because our AI-assisted workflow generates high-quality design drafts and code in hours, not days — leaving our senior developers to focus on quality assurance and custom logic rather than boilerplate. Complex SaaS apps typically take 4-8 weeks."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will my website use AI-generated content or be generic?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — AI tools are used to accelerate the coding and design process, not to generate your content or make it look generic. Every design is reviewed and refined by our creative team. The result is a unique, custom-built product, just delivered in a fraction of the usual time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I own my code after the project ends?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. 100% of the codebase, assets, and documentation is transferred to you at project completion. There's no licensing fee, no SaaS dependency, and no ongoing cost tied to us. You can host it anywhere and modify it freely."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tech stack will you use for my project?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We recommend the best stack for your specific requirements. Most modern web apps use Next.js + TypeScript + Tailwind on the frontend and Node.js + PostgreSQL on the backend. CMS-heavy sites often use WordPress or Sanity. We'll walk through the tradeoffs during the free consultation before committing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if there's a bug after launch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All plans include a 30-day (Growth/Enterprise) or 14-day (Starter) post-launch support window where we fix any bugs at no extra cost. After that window, we offer affordable monthly maintenance retainers or you can handle it in-house — your choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can you work with my existing team or codebase?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — we regularly augment in-house teams, take over legacy codebases for modernisation, and collaborate via GitHub PRs and Slack. We're flexible on integration into your existing workflow."
+      }
+    }
+  ]
+}
+</script>
+@endpush
+
 @endsection

@@ -430,45 +430,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="testi-sec" id="trust">
-  <div class="container">
-    <div class="rv" style="text-align:center">
-      <div class="s-label" style="justify-content:center"><span class="s-num">06 —</span> Client Stories</div>
-      <h2 class="s-title" style="text-align:center">Trusted Across<br><span class="ol">2 Continents.</span></h2>
-    </div>
-    <div class="testi-grid">
-      <div class="testi-card rv d1">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-text">Anbias redesigned our SaaS dashboard and cut load time from 8 seconds to under 1.2s. The AI-assisted development was noticeably faster — we launched 3 weeks ahead of schedule.</p>
-        <div class="testi-author">
-          <div class="testi-av">JM</div>
-          <div><div class="testi-name">James Mitchell</div><div class="testi-role">CTO — NovaTech, San Francisco USA</div></div>
-        </div>
-      </div>
-      <div class="testi-card rv d2">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-text">Their VAPT report uncovered 4 critical vulnerabilities in our payment flow we had no idea about. The remediation guidance was clear and their team helped us fix everything within a week.</p>
-        <div class="testi-author">
-          <div class="testi-av">PS</div>
-          <div><div class="testi-name">Priya Sharma</div><div class="testi-role">Founder — FinEdge, Bangalore India</div></div>
-        </div>
-      </div>
-      <div class="testi-card rv d3">
-        <div class="testi-stars">★★★★★</div>
-        <div class="testi-quote-mark">"</div>
-        <p class="testi-text">We went from page 6 to page 1 on Google for our top 3 keywords within 4 months. Anbias's SEO strategy was completely calibrated for both our Indian and US audiences.</p>
-        <div class="testi-author">
-          <div class="testi-av">AK</div>
-          <div><div class="testi-name">Arjun Kapoor</div><div class="testi-role">Marketing Director — TradeLink, Mumbai</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- WHY ANBIAS -->
 <section id="why">
   <div class="container">
@@ -536,7 +497,7 @@
     <div class="pricing-grid2">
       <div class="pc rv d1">
         <div class="pc-tier">Starter</div>
-        <div class="pc-price"><sup>$</sup>499</div>
+        <div class="pc-price"><sup>₹</sup>24,999</div>
         <div class="pc-freq">one-time / from</div>
         <ul class="pc-list">
           <li><span class="ck">✓</span> 5-page responsive website</li>
@@ -544,14 +505,14 @@
           <li><span class="ck">✓</span> Basic SEO setup</li>
           <li><span class="ck">✓</span> Contact form & integrations</li>
           <li><span class="ck">✓</span> SSL & security headers</li>
-          <li><span class="ck">✓</span> 30-day post-launch support</li>
+          <li><span class="ck">✓</span> 14-day post-launch support</li>
         </ul>
         <a href="#consult" class="pc-cta">Get Started</a>
       </div>
       <div class="pc featured rv d2">
         <span class="pc-badge">Most Popular</span>
         <div class="pc-tier">Growth</div>
-        <div class="pc-price"><sup>$</sup>1,299</div>
+        <div class="pc-price"><sup>₹</sup>59,999</div>
         <div class="pc-freq">one-time / from</div>
         <ul class="pc-list">
           <li><span class="ck">✓</span> Up to 15-page web application</li>
@@ -560,7 +521,7 @@
           <li><span class="ck">✓</span> CMS integration</li>
           <li><span class="ck">✓</span> VAPT security audit</li>
           <li><span class="ck">✓</span> Performance optimization</li>
-          <li><span class="ck">✓</span> 90-day post-launch support</li>
+          <li><span class="ck">✓</span> 30-day post-launch support</li>
         </ul>
         <a href="#consult" class="pc-cta">Get Started</a>
       </div>

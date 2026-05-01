@@ -376,7 +376,7 @@
         </div>
       </a>
 
-      <a href="https://wa.me/918223830302" target="_blank" rel="noopener" class="channel-item">
+      <a href="https://wa.me/918109109960" target="_blank" rel="noopener" class="channel-item">
         <div class="channel-icon-wrap">💬</div>
         <div class="channel-body">
           <div class="channel-type">WhatsApp</div>
