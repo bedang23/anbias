@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Custom CRM Software for Raipur and Chhattisgarh">
+  <defs>
+    <linearGradient id="bg-crm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#1A1F3A"/>
+    </linearGradient>
+    <linearGradient id="acc-crm" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <radialGradient id="glow-crm" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-crm" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg-crm)"/>
+  <rect width="1200" height="630" fill="url(#grid-crm)"/>
+
+  <!-- glow -->
+  <circle cx="940" cy="315" r="280" fill="url(#glow-crm)"/>
+
+  <!-- Kanban-board metaphor on right -->
+  <g transform="translate(740 170)">
+    <!-- column 1: New -->
+    <rect x="0" y="0" width="120" height="280" rx="12" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <text x="60" y="28" font-family="Inter, system-ui, sans-serif"
+          font-size="13" font-weight="700" fill="#9CA3AF" text-anchor="middle" letter-spacing="2">NEW</text>
+    <rect x="12" y="48" width="96" height="44" rx="6" fill="#1F2937" stroke="#F59E0B" stroke-width="1"/>
+    <rect x="20" y="60" width="60" height="6" rx="3" fill="#9CA3AF"/>
+    <rect x="20" y="74" width="40" height="5" rx="2.5" fill="#4B5563"/>
+    <rect x="12" y="104" width="96" height="44" rx="6" fill="#1F2937" stroke="#374151"/>
+    <rect x="20" y="116" width="68" height="6" rx="3" fill="#9CA3AF"/>
+    <rect x="20" y="130" width="44" height="5" rx="2.5" fill="#4B5563"/>
+    <rect x="12" y="160" width="96" height="44" rx="6" fill="#1F2937" stroke="#374151"/>
+    <rect x="20" y="172" width="56" height="6" rx="3" fill="#9CA3AF"/>
+    <rect x="20" y="186" width="36" height="5" rx="2.5" fill="#4B5563"/>
+
+    <!-- column 2: In Progress -->
+    <rect x="135" y="0" width="120" height="280" rx="12" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <text x="195" y="28" font-family="Inter, system-ui, sans-serif"
+          font-size="13" font-weight="700" fill="#F59E0B" text-anchor="middle" letter-spacing="2">ACTIVE</text>
+    <rect x="147" y="48" width="96" height="44" rx="6" fill="#1F2937" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="155" y="60" width="60" height="6" rx="3" fill="#FCD34D"/>
+    <rect x="155" y="74" width="40" height="5" rx="2.5" fill="#92400E"/>
+    <rect x="147" y="104" width="96" height="44" rx="6" fill="#1F2937" stroke="#F59E0B" stroke-width="1.5"/>
+    <rect x="155" y="116" width="50" height="6" rx="3" fill="#FCD34D"/>
+    <rect x="155" y="130" width="36" height="5" rx="2.5" fill="#92400E"/>
+
+    <!-- column 3: Closed -->
+    <rect x="270" y="0" width="120" height="280" rx="12" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+    <text x="330" y="28" font-family="Inter, system-ui, sans-serif"
+          font-size="13" font-weight="700" fill="#10B981" text-anchor="middle" letter-spacing="2">WON</text>
+    <rect x="282" y="48" width="96" height="44" rx="6" fill="#1F2937" stroke="#10B981" stroke-width="1"/>
+    <rect x="290" y="60" width="60" height="6" rx="3" fill="#10B981"/>
+    <rect x="290" y="74" width="40" height="5" rx="2.5" fill="#065F46"/>
+    <text x="362" y="71" font-family="ui-monospace, monospace" font-size="14" fill="#10B981">✓</text>
+    <rect x="282" y="104" width="96" height="44" rx="6" fill="#1F2937" stroke="#10B981" stroke-width="1"/>
+    <rect x="290" y="116" width="56" height="6" rx="3" fill="#10B981"/>
+    <rect x="290" y="130" width="36" height="5" rx="2.5" fill="#065F46"/>
+    <text x="362" y="127" font-family="ui-monospace, monospace" font-size="14" fill="#10B981">✓</text>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="80" y="120" font-family="Inter, system-ui, sans-serif"
+        font-size="18" font-weight="600" fill="#F59E0B" letter-spacing="4">
+    WEB ENGINEERING
+  </text>
+
+  <!-- Headline -->
+  <text x="80" y="200" font-family="Inter, system-ui, sans-serif"
+        font-size="62" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">
+    Custom CRM for
+  </text>
+  <text x="80" y="270" font-family="Inter, system-ui, sans-serif"
+        font-size="62" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">
+    Raipur businesses.
+  </text>
+
+  <!-- Sub-headline -->
+  <text x="80" y="335" font-family="Inter, system-ui, sans-serif"
+        font-size="24" font-weight="400" fill="#9CA3AF">
+    Beyond Excel and WhatsApp — what it costs,
+  </text>
+  <text x="80" y="370" font-family="Inter, system-ui, sans-serif"
+        font-size="24" font-weight="400" fill="#9CA3AF">
+    what it includes, why it pays for itself.
+  </text>
+
+  <!-- divider -->
+  <rect x="80" y="430" width="64" height="3" fill="url(#acc-crm)"/>
+
+  <!-- Author / brand -->
+  <text x="80" y="475" font-family="Inter, system-ui, sans-serif"
+        font-size="18" font-weight="600" fill="#E5E7EB">ANBIAS</text>
+  <text x="80" y="500" font-family="Inter, system-ui, sans-serif"
+        font-size="15" font-weight="400" fill="#6B7280">
+    AI-Powered Web Development &amp; Security
+  </text>
+
+  <text x="1120" y="595" font-family="ui-monospace, monospace"
+        font-size="14" font-weight="500" fill="#4B5563" text-anchor="end">
+    anbias.com / blog
+  </text>
+</svg>

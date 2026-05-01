@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Web Development Company in Raipur">
+  <defs>
+    <linearGradient id="bg-rwd" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1220"/>
+      <stop offset="100%" stop-color="#1A1F3A"/>
+    </linearGradient>
+    <linearGradient id="acc-rwd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="map-rwd" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow-rwd" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid-rwd" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#1F2937" stroke-width="1" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg-rwd)"/>
+  <rect width="1200" height="630" fill="url(#grid-rwd)"/>
+
+  <!-- abstract decorative orb -->
+  <circle cx="950" cy="180" r="280" fill="url(#glow-rwd)"/>
+
+  <!-- abstract code-bracket / map pin glyph on right -->
+  <g transform="translate(870 230)" opacity="0.95">
+    <!-- map pin -->
+    <path d="M 80 0 C 124 0 160 36 160 80 C 160 144 80 220 80 220 C 80 220 0 144 0 80 C 0 36 36 0 80 0 Z"
+          fill="none" stroke="url(#acc-rwd)" stroke-width="3"/>
+    <!-- inner code symbol -->
+    <text x="80" y="100" font-family="ui-monospace, SF Mono, Menlo, monospace"
+          font-size="56" font-weight="700" fill="#A78BFA" text-anchor="middle">&lt;/&gt;</text>
+    <!-- city label -->
+    <text x="80" y="155" font-family="Inter, system-ui, sans-serif"
+          font-size="20" font-weight="600" fill="#E5E7EB" text-anchor="middle"
+          letter-spacing="3">RAIPUR</text>
+  </g>
+
+  <!-- decorative dots constellation -->
+  <g fill="#3B82F6" opacity="0.6">
+    <circle cx="780" cy="120" r="3"/>
+    <circle cx="820" cy="160" r="2"/>
+    <circle cx="900" cy="90" r="2.5"/>
+    <circle cx="1050" cy="130" r="2"/>
+    <circle cx="1110" cy="200" r="3"/>
+    <circle cx="1080" cy="380" r="2"/>
+    <circle cx="950" cy="500" r="2.5"/>
+  </g>
+  <g stroke="#3B82F6" stroke-width="1" opacity="0.25" fill="none">
+    <line x1="780" y1="120" x2="900" y2="90"/>
+    <line x1="900" y1="90" x2="1050" y2="130"/>
+    <line x1="1050" y1="130" x2="1110" y2="200"/>
+  </g>
+
+  <!-- Eyebrow / category -->
+  <text x="80" y="120" font-family="Inter, system-ui, sans-serif"
+        font-size="18" font-weight="600" fill="#A78BFA" letter-spacing="4">
+    LOCAL BUSINESS GROWTH
+  </text>
+
+  <!-- Headline -->
+  <text x="80" y="200" font-family="Inter, system-ui, sans-serif"
+        font-size="64" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">
+    Web Development
+  </text>
+  <text x="80" y="270" font-family="Inter, system-ui, sans-serif"
+        font-size="64" font-weight="800" fill="#FFFFFF" letter-spacing="-1.5">
+    Company in Raipur
+  </text>
+
+  <!-- Sub-headline -->
+  <text x="80" y="330" font-family="Inter, system-ui, sans-serif"
+        font-size="24" font-weight="400" fill="#9CA3AF">
+    How to choose the right partner in 2026 —
+  </text>
+  <text x="80" y="365" font-family="Inter, system-ui, sans-serif"
+        font-size="24" font-weight="400" fill="#9CA3AF">
+    what to look for, what to avoid.
+  </text>
+
+  <!-- divider -->
+  <rect x="80" y="430" width="64" height="3" fill="url(#acc-rwd)"/>
+
+  <!-- Author / brand row -->
+  <text x="80" y="475" font-family="Inter, system-ui, sans-serif"
+        font-size="18" font-weight="600" fill="#E5E7EB">
+    ANBIAS
+  </text>
+  <text x="80" y="500" font-family="Inter, system-ui, sans-serif"
+        font-size="15" font-weight="400" fill="#6B7280">
+    AI-Powered Web Development &amp; Security
+  </text>
+
+  <!-- subtle bottom corner indicator -->
+  <text x="1120" y="595" font-family="ui-monospace, SF Mono, Menlo, monospace"
+        font-size="14" font-weight="500" fill="#4B5563" text-anchor="end">
+    anbias.com / blog
+  </text>
+</svg>

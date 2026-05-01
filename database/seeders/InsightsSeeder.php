@@ -93,7 +93,7 @@ class InsightsSeeder extends Seeder
             [
                 'author_id' => $author->id,
                 'category_id' => $blogEngineeringCategory->id,
-                'title' => 'Web Development Company in Raipur – How to Choose the Right Partner in 2025',
+                'title' => 'Web Development Company in Raipur – How to Choose the Right Partner in 2026',
                 'excerpt' => 'Choosing the right web development company in Raipur can make or break your digital presence. Here is what local businesses should look for, what to avoid, and why technical quality matters more than price.',
                 'content' => $this->raipurWebDevContent(),
                 'featured_image_path' => 'images/featured/blog-raipur-web-dev.svg',
@@ -127,40 +127,40 @@ class InsightsSeeder extends Seeder
         );
 
         Blog::query()->updateOrCreate(
-            ['slug' => 'local-seo-raipur-get-found-on-google-2025'],
+            ['slug' => 'local-seo-raipur-get-found-on-google-2026'],
             [
                 'author_id' => $author->id,
                 'category_id' => $blogLocalCategory->id,
-                'title' => 'Local SEO in Raipur: How to Get Your Business Found on Google in 2025',
+                'title' => 'Local SEO in Raipur: How to Get Your Business Found on Google in 2026',
                 'excerpt' => 'If your business does not appear when someone searches for your service in Raipur, you are losing customers every day. This guide explains local SEO for Chhattisgarh businesses — what it is, what it costs, and how to start.',
                 'content' => $this->raipurSeoContent(),
                 'featured_image_path' => 'images/featured/blog-raipur-seo.svg',
                 'is_published' => true,
                 'published_at' => now()->subDays(6),
-                'meta_title' => 'Local SEO in Raipur: Get Your Business Found on Google in 2025 | Anbias',
+                'meta_title' => 'Local SEO in Raipur: Get Your Business Found on Google in 2026 | Anbias',
                 'meta_description' => 'Complete guide to local SEO for Raipur and Chhattisgarh businesses. Google Business Profile, on-page SEO, citations, and keyword strategy to rank in local search results.',
-                'og_title' => 'Local SEO in Raipur – How to Get Found on Google in 2025',
+                'og_title' => 'Local SEO in Raipur – How to Get Found on Google in 2026',
                 'og_description' => 'A practical local SEO guide for businesses in Raipur, Bilaspur, Durg, Bhilai and across Chhattisgarh.',
-                'canonical_url' => 'https://anbias.com/blogs/local-seo-raipur-get-found-on-google-2025',
+                'canonical_url' => 'https://anbias.com/blogs/local-seo-raipur-get-found-on-google-2026',
             ]
         );
 
         Blog::query()->updateOrCreate(
-            ['slug' => 'why-raipur-business-needs-professional-website-2025'],
+            ['slug' => 'why-raipur-business-needs-professional-website-2026'],
             [
                 'author_id' => $author->id,
                 'category_id' => $blogLocalCategory->id,
-                'title' => 'Why Every Business in Raipur Needs a Professional Website in 2025',
+                'title' => 'Why Every Business in Raipur Needs a Professional Website in 2026',
                 'excerpt' => 'Over 750 million Indians are online and most search before they buy. If your Raipur business does not have a professional website, you are invisible to the largest buyer pool in history. Here is why it matters and how to fix it.',
                 'content' => $this->raipurWhyWebsiteContent(),
                 'featured_image_path' => 'images/featured/blog-raipur-website.svg',
                 'is_published' => true,
                 'published_at' => now()->subDays(8),
-                'meta_title' => 'Why Every Raipur Business Needs a Professional Website in 2025 | Anbias',
-                'meta_description' => 'Why professional websites matter for businesses in Raipur and Chhattisgarh in 2025 — lead generation, local SEO, credibility, and 24/7 visibility. Get started for ₹39,999.',
-                'og_title' => 'Why Every Raipur Business Needs a Professional Website in 2025',
+                'meta_title' => 'Why Every Raipur Business Needs a Professional Website in 2026 | Anbias',
+                'meta_description' => 'Why professional websites matter for businesses in Raipur and Chhattisgarh in 2026 — lead generation, local SEO, credibility, and 24/7 visibility. Get started for ₹39,999.',
+                'og_title' => 'Why Every Raipur Business Needs a Professional Website in 2026',
                 'og_description' => 'The digital shift in Chhattisgarh is already happening. Is your business positioned to benefit?',
-                'canonical_url' => 'https://anbias.com/blogs/why-raipur-business-needs-professional-website-2025',
+                'canonical_url' => 'https://anbias.com/blogs/why-raipur-business-needs-professional-website-2026',
             ]
         );
 
@@ -452,7 +452,7 @@ HTML;
   <li>"web development company in Raipur"</li>
   <li>"CA consultant near Shankar Nagar Raipur"</li>
   <li>"real estate agent Bilaspur Chhattisgarh"</li>
-  <li>"school admission Raipur 2025"</li>
+  <li>"school admission Raipur 2026"</li>
   <li>"hospital in Durg CG"</li>
   <li>"CRM software for businesses in Raipur"</li>
 </ul>
@@ -486,7 +486,7 @@ HTML;
     {
         return <<<'HTML'
 <h2>The Digital Shift in Raipur Is Already Happening</h2>
-<p>In 2025, over 750 million Indians use the internet — and smartphone penetration in Chhattisgarh is growing faster than most states. People in Raipur, Bilaspur, Durg, Bhilai, and across the state routinely search Google before making purchasing decisions, booking services, or contacting a business. If your business does not have a professional online presence, you are invisible to this audience entirely.</p>
+<p>In 2026, over 750 million Indians use the internet — and smartphone penetration in Chhattisgarh is growing faster than most states. People in Raipur, Bilaspur, Durg, Bhilai, and across the state routinely search Google before making purchasing decisions, booking services, or contacting a business. If your business does not have a professional online presence, you are invisible to this audience entirely.</p>
 <p>This is not a future concern you can defer. The shift has already happened. The question is whether your business is positioned to benefit from it — or losing customers daily to competitors who already are.</p>
 
 <h2>What a Professional Website Actually Does for Your Business</h2>
@@ -510,8 +510,8 @@ HTML;
   <li>No way to showcase reviews, case studies, or work samples professionally and persistently</li>
 </ul>
 
-<h2>What a Good Business Website Looks Like in 2025</h2>
-<p>A good website for a Raipur business in 2025 is not just functional — it is fast, findable, and built to convert. The baseline requirements:</p>
+<h2>What a Good Business Website Looks Like in 2026</h2>
+<p>A good website for a Raipur business in 2026 is not just functional — it is fast, findable, and built to convert. The baseline requirements:</p>
 <ul>
   <li><strong>Fast</strong> — loads in under 2 seconds on a 4G mobile connection, targeting a Lighthouse score above 90</li>
   <li><strong>Mobile-first</strong> — designed for phones before desktops, since over 80% of Chhattisgarh searches happen on mobile</li>
