@@ -518,7 +518,7 @@ $serviceMeta = [
             <div class="qc-val">150+</div>
             <div class="qc-body">
               <div class="qc-label">Projects Shipped</div>
-              <div class="qc-sub">For startups, enterprises, and growing businesses across the US and India since 2021</div>
+              <div class="qc-sub">For startups and growing businesses across Raipur, Chhattisgarh and pan-India since 2021</div>
             </div>
           </div>
         </div>
@@ -610,7 +610,7 @@ $serviceMeta = [
         <div class="rc-industry">eCommerce</div>
         <div class="rc-metric">+<span>38</span>%</div>
         <div class="rc-label">Conversion rate improvement for a Shopify store after UX redesign, checkout optimization, and CWV tuning.</div>
-        <div class="rc-project">// Project: US fashion brand storefront</div>
+        <div class="rc-project">// Project: eCommerce brand storefront</div>
       </div>
       <div class="result-card">
         <div class="rc-industry">FinTech Startup</div>
@@ -822,7 +822,7 @@ $serviceMeta = [
     <span class="ol">Something</span><br>
     Remarkable.
   </h2>
-  <p class="fcta-sub">Join 150+ businesses across the US and India who chose Anbias to build their digital products. Start with a free consultation.</p>
+  <p class="fcta-sub">Join 150+ businesses across Raipur, Chhattisgarh and pan-India who chose Anbias to build their digital products. Start with a free consultation.</p>
   <div class="fcta-btns">
     <a href="#consult" class="btn-lime">{{ $service['consult_label'] }}</a>
     <a href="mailto:contact@anbias.com" class="btn-ghost">contact@anbias.com</a>

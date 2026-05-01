@@ -398,17 +398,17 @@
           </div>
           <div class="location-row">
             <span class="flag">🇮🇳</span>
-            <span class="loc-label">Pune, Maharashtra</span>
+            <span class="loc-label">Bilaspur, CG</span>
             <span class="loc-role">Serving</span>
           </div>
           <div class="location-row">
-            <span class="flag">🇦🇪</span>
-            <span class="loc-label">Dubai, UAE</span>
+            <span class="flag">🇮🇳</span>
+            <span class="loc-label">Durg & Bhilai, CG</span>
             <span class="loc-role">Serving</span>
           </div>
           <div class="location-row">
-            <span class="flag">🇺🇸</span>
-            <span class="loc-label">United States</span>
+            <span class="flag">🇮🇳</span>
+            <span class="loc-label">Pan-India</span>
             <span class="loc-role">Serving</span>
           </div>
         </div>

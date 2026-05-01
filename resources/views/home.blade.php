@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Anbias | AI-Powered Web Development & Security')
-@section('meta_description', 'Build smarter, ship faster, and stay secure with Anbias. AI-powered web development and cybersecurity solutions for global businesses.')
+@section('title', 'Anbias | Web Development Company in Raipur, Chhattisgarh')
+@section('meta_description', 'Best web development company in Raipur, Chhattisgarh. AI-powered websites, custom CRM, eCommerce and SEO services for businesses across Raipur, Bilaspur, Durg, Bhilai and CG.')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
@@ -23,7 +23,7 @@
       <span class="dash"></span>
       AI-Powered Web Studio
       <span class="blink">_</span>
-      EST. 2021 — IND/USA
+      EST. 2021 — Raipur, India
     </div>
 
     <h1 class="hero-title">
@@ -36,7 +36,7 @@
       <p class="hero-desc">
         We design, develop & secure digital products using AI — delivering unique, 
         error-free solutions at <strong>¼ the time</strong> of traditional agencies. 
-        Serving startups and enterprises across the US and India.
+        Serving businesses across Raipur, Chhattisgarh and pan-India.
       </p>
       <div class="hero-stats-row">
         <div class="hstat">
@@ -79,7 +79,7 @@
     <span class="marquee-item2"><span class="dot2"></span>SEO & Rankings</span>
     <span class="marquee-item2"><span class="dot2"></span>React & Next.js</span>
     <span class="marquee-item2"><span class="dot2"></span>eCommerce</span>
-    <span class="marquee-item2"><span class="dot2"></span>US & India Clients</span>
+    <span class="marquee-item2"><span class="dot2"></span>Raipur & CG Clients</span>
     <span class="marquee-item2"><span class="dot2"></span>OWASP Compliance</span>
     <span class="marquee-item2"><span class="dot2"></span>Web Development</span>
     <span class="marquee-item2"><span class="dot2"></span>Web Security</span>
@@ -89,7 +89,7 @@
     <span class="marquee-item2"><span class="dot2"></span>SEO & Rankings</span>
     <span class="marquee-item2"><span class="dot2"></span>React & Next.js</span>
     <span class="marquee-item2"><span class="dot2"></span>eCommerce</span>
-    <span class="marquee-item2"><span class="dot2"></span>US & India Clients</span>
+    <span class="marquee-item2"><span class="dot2"></span>Raipur & CG Clients</span>
     <span class="marquee-item2"><span class="dot2"></span>OWASP Compliance</span>
   </div>
 </div>
@@ -119,7 +119,7 @@
         </div>
         <div class="srv-tab" onclick="switchTab(event, 'seo')">
           <div class="srv-tab-icon">📈</div>
-          <div class="srv-tab-text"><h4>SEO & Rankings</h4><p>US & India market optimized</p></div>
+          <div class="srv-tab-text"><h4>SEO & Rankings</h4><p>Raipur & Chhattisgarh focused</p></div>
         </div>
         <div class="srv-tab" onclick="switchTab(event, 'ecom')">
           <div class="srv-tab-icon">🛒</div>
@@ -179,14 +179,14 @@
       <div id="panel-seo" class="services-panel">
         <span class="panel-tag">Growth — #04</span>
         <h3 class="panel-title">SEO &<br>Rankings</h3>
-        <p class="panel-desc">Technical SEO, on-page optimization, and content strategy built for both US and Indian search markets — driving organic traffic that actually converts into revenue.</p>
+        <p class="panel-desc">Technical SEO, on-page optimization, and content strategy built for Raipur, Chhattisgarh and Indian search markets — driving organic traffic that converts into local leads and revenue.</p>
         <div class="panel-features">
           <div class="panel-feat"><span class="feat-check">✓</span><p>Technical SEO & Core Web Vitals</p></div>
-          <div class="panel-feat"><span class="feat-check">✓</span><p>US & India keyword research</p></div>
+          <div class="panel-feat"><span class="feat-check">✓</span><p>Raipur & Chhattisgarh keyword research</p></div>
           <div class="panel-feat"><span class="feat-check">✓</span><p>Schema markup & structured data</p></div>
           <div class="panel-feat"><span class="feat-check">✓</span><p>Content strategy & SEO writing</p></div>
           <div class="panel-feat"><span class="feat-check">✓</span><p>Monthly ranking & traffic reports</p></div>
-          <div class="panel-feat"><span class="feat-check">✓</span><p>Local SEO for Indian & US markets</p></div>
+          <div class="panel-feat"><span class="feat-check">✓</span><p>Local SEO for Raipur, Bilaspur, Durg & CG</p></div>
         </div>
         <a href="#consult" class="panel-cta">Boost your rankings → </a>
       </div>
@@ -201,7 +201,7 @@
           <div class="panel-feat"><span class="feat-check">✓</span><p>Payment gateway integrations</p></div>
           <div class="panel-feat"><span class="feat-check">✓</span><p>Conversion rate optimization (CRO)</p></div>
           <div class="panel-feat"><span class="feat-check">✓</span><p>Inventory & order management</p></div>
-          <div class="panel-feat"><span class="feat-check">✓</span><p>Cross-border US/India selling setup</p></div>
+          <div class="panel-feat"><span class="feat-check">✓</span><p>Local & pan-India selling setup</p></div>
         </div>
         <a href="#consult" class="panel-cta">Launch your store → </a>
       </div>
@@ -398,7 +398,7 @@
         <span class="sc-tag">VAPT & Pentesting</span>
         <div class="sc-icon">🔐</div>
         <h3>Complete Web Application Security</h3>
-        <p>We combine automated scanning with manual expert analysis to deliver thorough VAPT reports with actionable remediation steps. Trusted by FinTech, HealthTech, and SaaS companies across the US and India.</p>
+        <p>We combine automated scanning with manual expert analysis to deliver thorough VAPT reports with actionable remediation steps. Trusted by businesses across Raipur, Chhattisgarh and pan-India.</p>
         <ul class="sc-list">
           <li>OWASP Top 10 — SQL injection, XSS, IDOR, broken auth</li>
           <li>SSL/TLS configuration & certificate audit</li>
@@ -446,12 +446,12 @@
           <div class="why-item">
             <div class="wi-num">02</div>
             <div class="wi-icon">🌍</div>
-            <div class="wi-text"><h4>Dual-Market Expertise</h4><p>We understand what converts in Dallas and what converts in Delhi. Our strategies are calibrated for both US and Indian audiences — not one-size-fits-all.</p></div>
+            <div class="wi-text"><h4>Local Market Expertise</h4><p>We understand what converts in Raipur and across Chhattisgarh. Our strategies are calibrated for local Indian audiences — targeting the right search intent for your specific market.</p></div>
           </div>
           <div class="why-item">
             <div class="wi-num">03</div>
             <div class="wi-icon">💸</div>
-            <div class="wi-text"><h4>Agency Quality, Startup Pricing</h4><p>India-based operations mean Fortune-500 level quality at a fraction of what US agencies charge — without sacrificing a single pixel.</p></div>
+            <div class="wi-text"><h4>Agency Quality, Startup Pricing</h4><p>Raipur-based team means top-tier quality at pricing designed for Indian businesses — without compromising on design, speed, or reliability.</p></div>
           </div>
           <div class="why-item">
             <div class="wi-num">04</div>
@@ -463,7 +463,7 @@
       <div class="why-visual rv d2">
         <div class="why-stat-block">
           <div class="why-big-stat">150+</div>
-          <div class="why-stat-label">Projects delivered across the US, India & beyond</div>
+          <div class="why-stat-label">Projects delivered across Raipur, Chhattisgarh & pan-India</div>
         </div>
         <div class="why-stat-block">
           <div class="why-big-stat">4×</div>
@@ -560,8 +560,8 @@
         <div class="faq2-a"><p>We use AI at every stage — for generating unique design concepts, writing code, auto-testing for errors, and creating SEO content. Everything is reviewed and refined by senior developers, so you get the speed of AI with the quality of human expertise.</p></div>
       </div>
       <div class="faq2-item">
-        <button class="faq2-q" onclick="toggleFaq2(this)">Do you work with US clients despite being India-based?<span class="faq2-icon">+</span></button>
-        <div class="faq2-a"><p>Absolutely. Roughly half our clients are US-based. We offer flexible scheduling for EST, CST, and PST time zones and communicate fluently in English. Many clients find our India base a major advantage — high quality at competitive pricing.</p></div>
+        <button class="faq2-q" onclick="toggleFaq2(this)">Do you work with businesses outside Raipur — Bilaspur, Durg, Bhilai?<span class="faq2-icon">+</span></button>
+        <div class="faq2-a"><p>Absolutely. We serve businesses across the entire state of Chhattisgarh — Raipur, Bilaspur, Durg, Bhilai, Korba, Rajnandgaon, Jagdalpur, and beyond. All engagements are managed remotely via video calls, shared project boards, and WhatsApp with no quality compromise compared to in-person meetings.</p></div>
       </div>
       <div class="faq2-item">
         <button class="faq2-q" onclick="toggleFaq2(this)">How long does a typical project take?<span class="faq2-icon">+</span></button>
@@ -587,7 +587,7 @@
     <span class="ol">Something</span><br>
     Extraordinary.
   </h2>
-  <p class="fcta-sub">Join 150+ businesses across the US and India who chose Anbias. Let's start with a free conversation.</p>
+  <p class="fcta-sub">Join 150+ businesses across Raipur, Chhattisgarh and pan-India who chose Anbias. Let's start with a free conversation.</p>
   <div class="fcta-btns">
     <a href="#consult" class="btn-lime">Book Free Consultancy</a>
     <a href="mailto:contact@anbias.com" class="btn-ghost">contact@anbias.com</a>

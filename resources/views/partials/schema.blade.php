@@ -23,7 +23,7 @@
             'addressRegion' => 'Chhattisgarh',
             'addressCountry' => 'IN',
         ],
-        'areaServed' => ['US', 'AE', 'IN', 'Pune'],
+        'areaServed' => ['Raipur', 'Bilaspur', 'Durg', 'Bhilai', 'Korba', 'Rajnandgaon', 'Jagdalpur', 'Chhattisgarh', 'IN'],
         'sameAs' => $socialLinks,
     ];
 
@@ -49,10 +49,10 @@
             ],
             [
                 '@type' => 'Question',
-                'name' => 'Do you work with US clients despite being India-based?',
+                'name' => 'Do you work with businesses outside Raipur — Bilaspur, Durg, Bhilai?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'Absolutely. Roughly half our clients are US-based. We offer flexible scheduling for EST, CST, and PST time zones and communicate fluently in English. Many clients find our India base a major advantage — high quality at competitive pricing.',
+                    'text' => 'Absolutely. We serve businesses across the entire state of Chhattisgarh — Raipur, Bilaspur, Durg, Bhilai, Korba, Rajnandgaon, Jagdalpur, and beyond. All engagements are managed remotely via video calls, shared project boards, and WhatsApp with no quality compromise.',
                 ],
             ],
             [
@@ -76,7 +76,7 @@
                 'name' => 'What industries do you specialize in?',
                 'acceptedAnswer' => [
                     '@type' => 'Answer',
-                    'text' => 'We\'ve worked across SaaS, FinTech, eCommerce, HealthTech, EdTech, real estate, and professional services. Our AI tools allow us to rapidly absorb new domains regardless of your niche.',
+                    'text' => 'We work with businesses across real estate, education, retail, manufacturing, healthcare, and professional services in Raipur and Chhattisgarh. Our AI-powered workflow allows us to rapidly absorb any domain regardless of niche.',
                 ],
             ],
         ],

@@ -1,114 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
     <url>
-    <loc>http://localhost</loc>
+    <loc>https://anbias.com</loc>
             </url>
     <url>
-    <loc>http://localhost/contact</loc>
+    <loc>https://anbias.com/contact</loc>
             </url>
     <url>
-    <loc>http://localhost/about</loc>
+    <loc>https://anbias.com/about</loc>
             </url>
     <url>
-    <loc>http://localhost/privacy-policy</loc>
+    <loc>https://anbias.com/privacy-policy</loc>
             </url>
     <url>
-    <loc>http://localhost/terms-and-conditions</loc>
+    <loc>https://anbias.com/terms-and-conditions</loc>
             </url>
     <url>
-    <loc>http://localhost/sitemap</loc>
+    <loc>https://anbias.com/sitemap</loc>
             </url>
     <url>
-    <loc>http://localhost/blogs</loc>
+    <loc>https://anbias.com/blogs</loc>
             </url>
     <url>
-    <loc>http://localhost/case-studies</loc>
+    <loc>https://anbias.com/case-studies</loc>
             </url>
     <url>
-    <loc>http://localhost/services</loc>
+    <loc>https://anbias.com/services</loc>
             </url>
     <url>
-    <loc>http://localhost/services/web-development</loc>
+    <loc>https://anbias.com/services/web-development</loc>
             </url>
     <url>
-    <loc>http://localhost/services/web-security</loc>
+    <loc>https://anbias.com/services/web-security</loc>
             </url>
     <url>
-    <loc>http://localhost/services/ai-development</loc>
+    <loc>https://anbias.com/services/ai-development</loc>
             </url>
     <url>
-    <loc>http://localhost/services/seo</loc>
+    <loc>https://anbias.com/services/seo</loc>
             </url>
     <url>
-    <loc>http://localhost/services/ecommerce</loc>
+    <loc>https://anbias.com/services/ecommerce</loc>
             </url>
     <url>
-    <loc>http://localhost/services/maintenance</loc>
+    <loc>https://anbias.com/services/maintenance</loc>
             </url>
     <url>
-    <loc>http://localhost/blogs/agentic-ai-and-how-it-transforms-the-world-of-it</loc>
+    <loc>https://anbias.com/blogs/agentic-ai-and-how-it-transforms-the-world-of-it</loc>
             </url>
     <url>
-    <loc>http://localhost/blogs/nextjs-15-features-what-changed-and-why-its-better</loc>
+    <loc>https://anbias.com/blogs/nextjs-15-features-what-changed-and-why-its-better</loc>
             </url>
     <url>
-    <loc>http://localhost/case-studies/custom-education-website-seo-growth-case-study</loc>
+    <loc>https://anbias.com/blogs/web-development-company-in-raipur</loc>
             </url>
     <url>
-    <loc>http://localhost/case-studies/sales-crm-automation-workflow-case-study</loc>
+    <loc>https://anbias.com/blogs/custom-crm-software-raipur-chhattisgarh</loc>
             </url>
     <url>
-    <loc>http://localhost/authors/bedang-banerjee</loc>
+    <loc>https://anbias.com/blogs/local-seo-raipur-get-found-on-google-2025</loc>
             </url>
     <url>
-    <loc>http://localhost/</loc>
+    <loc>https://anbias.com/blogs/why-raipur-business-needs-professional-website-2025</loc>
             </url>
     <url>
-    <loc>http://localhost/?C=N;O=D</loc>
+    <loc>https://anbias.com/case-studies/custom-education-website-seo-growth-case-study</loc>
             </url>
     <url>
-    <loc>http://localhost/?C=M;O=A</loc>
+    <loc>https://anbias.com/case-studies/sales-crm-automation-workflow-case-study</loc>
             </url>
     <url>
-    <loc>http://localhost/?C=S;O=A</loc>
+    <loc>https://anbias.com/authors/bedang-banerjee</loc>
             </url>
     <url>
-    <loc>http://localhost/?C=D;O=A</loc>
+    <loc>https://anbias.com/</loc>
             </url>
     <url>
-    <loc>http://localhost/wordpress-6.9.4.zip</loc>
+    <loc>https://anbias.com/case-studies/from-legacy-wordpress-to-headless-nextjs</loc>
             </url>
     <url>
-    <loc>http://localhost/poo-wordpress/</loc>
+    <loc>https://anbias.com/case-studies/custom-laravel-crm-sales-tracking-security</loc>
             </url>
     <url>
-    <loc>http://localhost/bsp-website/</loc>
-            </url>
-    <url>
-    <loc>http://localhost/?C=M;O=D</loc>
-            </url>
-    <url>
-    <loc>http://localhost/?C=S;O=D</loc>
-            </url>
-    <url>
-    <loc>http://localhost/?C=D;O=D</loc>
-            </url>
-    <url>
-    <loc>http://localhost/?C=N;O=A</loc>
-            </url>
-    <url>
-    <loc>http://localhost/bsp-website/events/</loc>
-            </url>
-    <url>
-    <loc>http://localhost/bsp-website/about-us/</loc>
-            </url>
-    <url>
-    <loc>http://localhost/bsp-website/gallery/</loc>
-            </url>
-    <url>
-    <loc>http://localhost/bsp-website/contact-us/</loc>
-            </url>
-    <url>
-    <loc>http://localhost/bsp-website/news/</loc>
+    <loc>https://anbias.com/authors/b-banerjee</loc>
             </url>
 </urlset>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'About Anbias | AI-Powered Web Development & Security')
-@section('meta_description', 'Learn about Anbias, founded in 2021 and operating across Raipur, Pune, USA, and Dubai with expertise from WordPress to Next.js.')
+@section('meta_description', 'Learn about Anbias — a web development and digital agency founded in 2021, headquartered in Raipur, Chhattisgarh. Serving businesses across Bilaspur, Durg, Bhilai and pan-India.')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/info-pages.css') }}">
@@ -23,8 +23,8 @@
     <h1 class="info-title">About<br><span class="ol">Anbias</span></h1>
     <p class="info-sub">
       Anbias is a practical engineering studio focused on web development, security, and performance.
-      We started in 2021, were set up in Raipur (Chhattisgarh), and now support businesses across India,
-      the US, and Dubai.
+      We started in 2021, are headquartered in Raipur (Chhattisgarh), and serve businesses across
+      Raipur, Bilaspur, Durg, Bhilai, and pan-India.
     </p>
   </div>
 </section>
@@ -41,7 +41,7 @@
         <ul class="info-list">
           <li>Founded in 2021</li>
           <li>Setup and registered in Raipur, Chhattisgarh</li>
-          <li>Active delivery across Raipur, Pune, USA, and Dubai</li>
+          <li>Active delivery across Raipur, Bilaspur, Durg, Bhilai and Chhattisgarh</li>
         </ul>
       </article>
 

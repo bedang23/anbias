@@ -31,8 +31,6 @@
     <meta name="twitter:description" content="{{ trim($__env->yieldContent('twitter_description', $seoDescription)) }}">
     <meta name="twitter:image" content="{{ $ogImage }}">
 
-    <link rel="alternate" hreflang="en-us" href="https://anbias.com/" />
-    <link rel="alternate" hreflang="en-ae" href="https://anbias.com/" />
     <link rel="alternate" hreflang="en-in" href="https://anbias.com/" />
     <link rel="alternate" hreflang="x-default" href="https://anbias.com/" />
 
