@@ -13,14 +13,14 @@ class InsightsSeeder extends Seeder
     public function run(): void
     {
         $author = Author::query()->updateOrCreate(
-            ['slug' => 'bedang-banerjee'],
+            ['slug' => 'b-banerjee'],
             [
-                'name' => 'Bedang Banerjee',
+                'name' => 'B Banerjee',
                 'designation' => 'Founder & Senior Laravel Architect',
                 'years_experience' => 8,
-                'bio' => 'Bedang leads architecture, delivery strategy, and performance engineering at Anbias. He works across Laravel, Next.js, AI-assisted workflows, and growth-focused technical execution for businesses in Raipur, Chhattisgarh and pan-India.',
-                'meta_title' => 'Bedang Banerjee | Founder & Senior Laravel Architect | Anbias',
-                'meta_description' => 'Author profile of Bedang Banerjee, Founder and Senior Laravel Architect at Anbias with expertise in scalable web systems, AI workflows, and SEO-focused engineering.',
+                'bio' => 'B leads architecture, delivery strategy, and performance engineering at Anbias. He works across Laravel, Next.js, AI-assisted workflows, and growth-focused technical execution for businesses in Raipur, Chhattisgarh and pan-India.',
+                'meta_title' => 'B Banerjee | Founder & Senior Laravel Architect | Anbias',
+                'meta_description' => 'Author profile of B Banerjee, Founder and Senior Laravel Architect at Anbias with expertise in scalable web systems, AI workflows, and SEO-focused engineering.',
             ]
         );
 
