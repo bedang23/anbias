@@ -268,6 +268,13 @@ document.getElementById('contactForm')?.addEventListener('submit', async functio
     if (formStartedAt) {
       formStartedAt.value = Math.floor(Date.now() / 1000).toString();
     }
+
+    // Track conversion event for successful form submission
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion_event_submit_lead_form', {
+        'event_timeout': 2000,
+      });
+    }
   } catch (error) {
     if (formError) {
       formError.textContent = error.message || 'Could not submit your request. Please try again.';

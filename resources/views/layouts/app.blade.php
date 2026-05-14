@@ -57,6 +57,25 @@
       gtag('js', new Date());
       gtag('config', 'G-9GGD110NCT');
     </script>
+
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
+    <script>
+      // Helper function to delay opening a URL until a gtag event is sent.
+      // Call it in response to an action that should navigate to a URL.
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion_event_submit_lead_form', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+          // <event_parameters>
+        });
+        return false;
+      }
+    </script>
 </head>
 
 <body>
@@ -67,7 +86,7 @@
     </main>
 
     <x-footer />
-    <a href="tel:+918109109960" class="floating-call-btn" aria-label="Call Anbias now">
+    <a href="tel:+918109109960" class="floating-call-btn" aria-label="Call Anbias now" onclick="if(typeof gtag==='function'){gtag('event','conversion_event_submit_lead_form',{'event_timeout':2000});}">
         <span class="fc-icon">📞</span>
         <span class="fc-text">Call Now</span>
     </a>

@@ -367,7 +367,7 @@
         </div>
       </a>
 
-      <a href="tel:+918109109960" class="channel-item">
+      <a href="tel:+918109109960" class="channel-item" onclick="if(typeof gtag==='function'){gtag('event','conversion_event_submit_lead_form',{'event_timeout':2000});}">
         <div class="channel-icon-wrap">📞</div>
         <div class="channel-body">
           <div class="channel-type">Direct Line</div>
@@ -376,7 +376,7 @@
         </div>
       </a>
 
-      <a href="https://wa.me/918109109960" target="_blank" rel="noopener" class="channel-item">
+      <a href="https://wa.me/918109109960" target="_blank" rel="noopener" class="channel-item" onclick="if(typeof gtag==='function'){gtag('event','conversion_event_submit_lead_form',{'event_timeout':2000});}">
         <div class="channel-icon-wrap">💬</div>
         <div class="channel-body">
           <div class="channel-type">WhatsApp</div>
